@@ -11,6 +11,7 @@ My approach was as follows:
 5. Created a design and a styleguide in sketch.
 6. Thought about the small folder structure/archticture
 7. Started with setting up the html structure and content.
+8. First do it ugly and make it work, then optimize it
 8. To be continued.....
 
 
@@ -24,6 +25,7 @@ These are some options I possibly want to implement:
 - Awesome introduction when opening the website.
 - Different hosting options.
 - And much moreeeeeeee :) 
+- Webcomponents
 
 
 ## Technique
