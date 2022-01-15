@@ -138,10 +138,15 @@ table {
   --font-size-sub-title: 1.5rem;
   --font-size-regular: 1rem;
   --font-size-icons: 2rem;
+  --primary-margin: 1rem;
 }
 
 body {
   background-color: var(--background-color);
+}
+
+section {
+  margin-left: 10%;
 }
 
 /* Fonts */
@@ -154,7 +159,7 @@ a {
   font-family: "Lato", sans-serif;
   font-weight: bold;
   color: var(--text-color);
-
+  margin: var(--primary-margin);
 }
 
 p,
@@ -164,6 +169,8 @@ button {
   font-weight: normal;
   font-size: var(--font-size-regular);
   color: var(--text-color);
+  margin: var(--primary-margin);
+  line-height: normal;
 }
 
 /* Detailed changes to fonts */
@@ -185,11 +192,6 @@ h5 {
 a {
   text-decoration: none;
   cursor: pointer;
-
-}
-
-button {
-  font-size: var(--font-size-sub-title);
 }
 
 /* Styling of the navigation */
@@ -203,14 +205,86 @@ button {
 
 .nav-images {
   max-width: var(--font-size-icons);
-  margin: var(--font-size-regular);
+  margin: var(--primary-margin);
 }
 
 li {
   display: inline-block;
-  margin: var(--font-size-regular);
+  margin: var(--primary-margin);
 }
 
 a:hover {
   color: var(--primary-color);
+}
+
+/* Styling about me section */
+
+#about-me {
+  display: flex;
+  margin-top: 3%;
+}
+.about-content {
+  max-width: 40%;
+}
+
+.about-image {
+  margin-left: 10%;
+}
+
+#portret {
+  border: 0.3rem solid var(--primary-color);
+  border-radius: 10px 100px / 120px;
+  max-width: 80%;
+  max-height: 100%;
+}
+
+/* Button design */
+
+button {
+  background-color: var(--background-color);
+  border: 0.2rem solid var(--primary-color);
+  border-radius: 2px;
+  width: 50%;
+  line-height: 2rem;
+  cursor: pointer;
+}
+
+/* Expertise section styling */
+
+#expertise {
+  display: flex;
+  margin-top: 3%;
+}
+
+.expertise-content {
+  max-width: 40%;
+}
+
+.expertise-logos {
+  margin-left: 10%;
+  display: flex;
+}
+
+.expertise-logo {
+  max-width: 75px;
+  max-height: 75px;
+  background-color: var(--text-color);
+  border: 0.2rem solid var(--primary-color);
+  border-radius: 2px;
+}
+
+.expertise-logo-container{
+  background-color: var(--text-color);
+  border: 0.2rem solid var(--primary-color);
+  border-radius: 2px;
+  height: 75px;
+  width:75px;
+  text-align:center;
+
+}
+.expertise-logo-container img{
+  margin-top: 10%;
+  margin-bottom: 10%;
+  max-height:80%;
+  max-width: 80%;
 }
