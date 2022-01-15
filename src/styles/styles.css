@@ -1,0 +1,216 @@
+/* Import TODO make a choice between import or links */
+/* CSS reset */
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Variables from the styleguide */
+:root {
+  --primary-color: #08fdb4;
+  --secondary-color: #81d8f7;
+  --text-color: #fff;
+  --validation-color: #fd2155;
+  --projects-color: #ea9610;
+  --background-color: #1d1d1d;
+  --font-size-titles: 3rem;
+  --font-size-sub-title: 1.5rem;
+  --font-size-regular: 1rem;
+  --font-size-icons: 2rem;
+}
+
+body {
+  background-color: var(--background-color);
+}
+
+/* Fonts */
+h1,
+h2,
+h3,
+h4,
+h5,
+a {
+  font-family: "Lato", sans-serif;
+  font-weight: bold;
+  color: var(--text-color);
+
+}
+
+p,
+label,
+button {
+  font-family: "Roboto", sans-serif;
+  font-weight: normal;
+  font-size: var(--font-size-regular);
+  color: var(--text-color);
+}
+
+/* Detailed changes to fonts */
+h1,
+h2 {
+  font-size: var(--font-size-titles);
+  color: var(--primary-color);
+}
+
+h3 {
+  font-size: var(--font-size-sub-title);
+}
+
+h4,
+h5 {
+  color: var(--secondary-color);
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+
+}
+
+button {
+  font-size: var(--font-size-sub-title);
+}
+
+/* Styling of the navigation */
+.nav-container {
+  background-color: #2a2929;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: fit-content;
+}
+
+.nav-images {
+  max-width: var(--font-size-icons);
+  margin: var(--font-size-regular);
+}
+
+li {
+  display: inline-block;
+  margin: var(--font-size-regular);
+}
+
+a:hover {
+  color: var(--primary-color);
+}
