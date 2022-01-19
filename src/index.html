@@ -177,7 +177,7 @@
             This portfolio is a WIP. I like to add new features, create a bit
             more "flare". The code can be found on my github as for the other
             projects. Some are private repositories, but we can always talk
-            about tha ;)
+            about that ;)
           </p>
           <h5>Techniques</h5>
           <p>JavaScript, HTML, CSS</p>
@@ -186,39 +186,80 @@
       </div>
     </section>
     <!--Contact me -->
-    <section id="contact-me">
-      <h2>Lets get in contact</h2>
-      <h3>Lets get to know each other</h3>
-      <p>
-        Getting to know new people gives me energy. Lets see what we could do
-        for eachother! I am interested in meetup speakers, new opportunities,
-        knowledge sharing etc.
-      </p>
-      <form>
-        <label>Name</label>
-        <input />
-        <label>Email</label>
-        <input />
-        <label>Subject</label>
-        <input />
-        <label>Description</label>
-        <input />
-        <button>Send message</button>
-      </form>
-    </section>
-    <!--Downloads -->
-    <section>
-      <h2>Shy?</h2>
-      <h3>Want to know more about me without talking?</h3>
-      <p>
-        Getting to know new people gives me energy. Lets see what we could do
-        for eachother! I am interested in meetup speakers, new opportunities,
-        knowledge sharing etc.
-      </p>
-      <a href="">Linkedin</a>
-      <a href="">Github</a>
-      <button>CV donwload</button>
-      <button>Insights download</button>
+    <section id="contact-information">
+      <div>
+        <h2>Lets get in contact</h2>
+        <h3>Lets get to know each other</h3>
+        <p>
+          Getting to know new people gives me energy. Lets see what we could do
+          for eachother! I am interested in meetup speakers, new opportunities,
+          knowledge sharing etc.
+        </p>
+        <form class="contact-form" action="mailto:chretien1998@gmail.com" method="post">
+          <div>
+            <label for="name">Name</label>
+            <input type="text" name="name" placeholder="Chrétien van Veldhuizen"/>
+          </div>
+          <div>
+            <label for="email">Email</label>
+            <input type="email" name="email" placeholder="example@example.com"/>
+          </div>
+          <div>
+            <label for="email-title">Subject</label>
+            <select name="email-title">
+              <option value="job">Job opportunity</option>
+              <option value="meetup">Meetup speaker</option>
+              <option value="knowledge">Knowledge Sharing</option>
+              <option value="suprise">Surprise</option>
+            </select>
+          </div>
+          <div>
+            <label for="email-content">Description</label>
+            <textarea name="email-content"></textarea>
+          </div>
+
+          <button type="submit">Send message</button>
+        </form>
+      </div>
+
+      <!--Downloads -->
+      <div>
+        <h2>Shy?</h2>
+        <h3>Want to know more about me without talking?</h3>
+        <p>
+          Getting to know new people gives me energy. Lets see what we could do
+          for eachother! I am interested in knowledge sharing, new
+          opportunities, and speakers for
+          <a
+            class="no-margins"
+            target="_blank"
+            href="https://www.meetup.com/sogeti-frontend/"
+            >the frontend Lightning talks</a
+          >
+        </p>
+        <a
+          target="_blank"
+          href="https://www.linkedin.com/in/chretienvanveldhuizen/"
+          ><img class="project-github-icon" src="assets/logos/linkedin.png"
+        /></a>
+        <a target="_blank" href="https://github.com/Chretienvv"
+          ><img class="project-github-icon" src="assets/logos/github.png"
+        /></a>
+        <button class="button-downloads">
+          <a
+            href="assets/downloadable-files/summary_chretien.pdf"
+            target="_blank"
+            >Summary of my cv</a
+          >
+        </button>
+        <button class="button-downloads">
+          <a
+            href="assets/downloadable-files/chretien_van_veldhuizen_sogeti.pdf"
+            target="_blank"
+            >Extended CV</a
+          >
+        </button>
+      </div>
     </section>
   </body>
 </html>
