@@ -136,12 +136,23 @@ table {
   --background-color: #1d1d1d;
   --font-size-titles: 3rem;
   --font-size-sub-title: 1.5rem;
+  --font-size-labels:1.2rem;
   --font-size-regular: 1rem;
   --font-size-icons: 2rem;
+  --primary-margin: 1rem;
+}
+
+.no-margins {
+  margin: 0;
 }
 
 body {
   background-color: var(--background-color);
+}
+
+section {
+  margin-left: 10%;
+  margin-top: 5%;
 }
 
 /* Fonts */
@@ -154,7 +165,7 @@ a {
   font-family: "Lato", sans-serif;
   font-weight: bold;
   color: var(--text-color);
-
+  margin: var(--primary-margin);
 }
 
 p,
@@ -164,6 +175,8 @@ button {
   font-weight: normal;
   font-size: var(--font-size-regular);
   color: var(--text-color);
+  margin: var(--primary-margin);
+  line-height: normal;
 }
 
 /* Detailed changes to fonts */
@@ -173,7 +186,8 @@ h2 {
   color: var(--primary-color);
 }
 
-h3 {
+h3,
+h4 {
   font-size: var(--font-size-sub-title);
 }
 
@@ -185,11 +199,6 @@ h5 {
 a {
   text-decoration: none;
   cursor: pointer;
-
-}
-
-button {
-  font-size: var(--font-size-sub-title);
 }
 
 /* Styling of the navigation */
@@ -203,14 +212,199 @@ button {
 
 .nav-images {
   max-width: var(--font-size-icons);
-  margin: var(--font-size-regular);
+  margin: var(--primary-margin);
+  display: inline-block;
 }
 
 li {
   display: inline-block;
-  margin: var(--font-size-regular);
+  margin: var(--primary-margin);
 }
 
 a:hover {
   color: var(--primary-color);
+}
+
+/* Styling about me section */
+
+#about-me {
+  display: flex;
+  margin-top: 3%;
+}
+.about-content {
+  max-width: 40%;
+}
+
+.about-image {
+  margin-left: 10%;
+}
+
+#portret {
+  border: 0.3rem solid var(--primary-color);
+  border-radius: 10px 100px / 120px;
+  max-width: 80%;
+  max-height: 100%;
+}
+
+/* Button design */
+
+button {
+  background-color: var(--background-color);
+  border: 0.2rem solid var(--primary-color);
+  border-radius: 2px;
+  width: 50%;
+  line-height: 2rem;
+  cursor: pointer;
+}
+
+/* Expertise section styling */
+
+#expertise {
+  display: flex;
+  margin-top: 3%;
+}
+
+.expertise-content {
+  max-width: 40%;
+}
+
+.expertise-logos {
+  margin-left: 10%;
+  display: inline-grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  column-gap: var(--primary-margin);
+}
+
+.expertise-logo {
+  max-width: 75px;
+  max-height: 75px;
+  background-color: var(--text-color);
+  border: 0.2rem solid var(--primary-color);
+  border-radius: 2px;
+}
+
+.expertise-logo-container {
+  background-color: var(--text-color);
+  border: 0.2rem solid var(--primary-color);
+  border-radius: 2px;
+  height: 75px;
+  width: 75px;
+  text-align: center;
+}
+.expertise-logo-container img {
+  margin-top: 10%;
+  margin-bottom: 10%;
+  max-height: 80%;
+  max-width: 80%;
+}
+
+#horizontal-aws-logo {
+  margin-top: 25%;
+}
+
+/* Projects section styling */
+.projects-section-context {
+  width: 40%;
+}
+/* TODO: see how this link behaves and correct it without position */
+.project-github-icon {
+  cursor: pointer;
+  max-height: var(--font-size-icons);
+  position: relative;
+  top: 10px;
+}
+
+.project-section-selection {
+  max-width: 80%;
+  display: flex;
+  column-gap: 5%;
+  margin: var(--primary-margin);
+}
+
+.project-card {
+  border: 0.2rem solid var(--secondary-color);
+  max-width: 30%;
+  text-align: center;
+}
+.project-card-button {
+  border-color: var(--secondary-color);
+}
+.project-card-button:hover {
+  border-color: var(--primary-color);
+  background-color: var(--primary-color);
+  color: #1d1d1d;
+}
+
+/* Contact information styling */
+#contact-information {
+  display: flex;
+  gap: 5%;
+}
+
+.button-downloads {
+  display: inline-block;
+  max-width: 30%;
+}
+
+.contact-form {
+  margin-left: var(--primary-margin);
+}
+
+.contact-form label {
+  display: block;
+  font-size: var(--font-size-labels);
+  margin:0.1rem;
+}
+
+.contact-form input {
+  font-family: "Roboto", sans-serif;
+  font-weight: normal;
+  background-color: var(--background-color);
+  border: 0.1rem solid var(--text-color);
+  border-radius: 2px;
+  width: 70%;
+  display: block;
+  height:var(--font-size-icons);
+  margin-bottom: var(--primary-margin);
+  outline: none;
+  color:var(--text-color)
+}
+
+
+.contact-form input:focus{
+  border: 0.2rem solid var(--secondary-color);
+ 
+}
+.contact-form textarea {
+  width: 70%;
+  display: block;
+  height:6rem;
+  border: 0.1rem solid var(--text-color);
+  border-radius: 2px;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  resize: none;
+  outline: none;
+  font-family: "Roboto", sans-serif;
+  font-weight: normal;
+}
+
+.contact-form textarea:focus{
+  border: 0.2rem solid var(--secondary-color);
+
+}
+
+.contact-form button{
+  margin-left:0;
+}
+
+select{
+  background-color:var(--background-color);
+  width:71%;
+  border: 0.1rem solid var(--text-color);
+  border-radius: 2px;
+  margin-bottom: var(--primary-margin);
+  color:var(--text-color);
+  height:2rem;
+  outline:none;
 }

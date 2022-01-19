@@ -14,28 +14,29 @@
   </head>
   <body>
     <div class="nav-container">
-       
       <nav>
         <ul>
-          <li><a href="#about_me">About me</a></li>
+          <li><a href="#about-me">About me</a></li>
           <li><a href="#expertise">Expertise</a></li>
           <li><a href="#">Projects</a></li>
-          <li><a href="#contact_me">Contact me</a></li>
+          <li><a href="#contact-me">Contact me</a></li>
           <li><a href="#">Playground</a></li>
         </ul>
       </nav>
-      <div class="navigation-logo">
-        <a target="_blank" href="https://www.linkedin.com/in/chretienvanveldhuizen/""
-        ><img class="nav-images" src="assets/logos/linkedin.png"
-      /></a>
-        <a  target="_blank" href="https://github.com/Chretienvv"
+      <div>
+        <a
+          target="_blank"
+          href="https://www.linkedin.com/in/chretienvanveldhuizen/"
+          ><img class="nav-images" src="assets/logos/linkedin.png"
+        /></a>
+        <a target="_blank" href="https://github.com/Chretienvv"
           ><img class="nav-images" src="assets/logos/github.png"
         /></a>
       </div>
     </div>
     <!-- About me Intro-->
-    <section id="about_me">
-      <div>
+    <section id="about-me">
+      <div class="about-content">
         <h1>Bridge between man and Machine</h1>
         <h3>
           Chrétien van Veldhuizen: Frontend developer with an interest in cloud
@@ -54,54 +55,95 @@
           Proactive, Structured & Analytical, Transparent, Curious, Studious &
           Passionate, Helpful & Team player Social
         </p>
-        <button>Download my CV</button>
+        <button>
+          <a
+            href="assets/downloadable-files/summary_chretien.pdf"
+            target="_blank"
+            >See my cv</a
+          >
+        </button>
       </div>
-      <div>
-        <img src="./assets/images/portret-chretien.jpg" />
+      <div class="about-image">
+        <img id="portret" src="./assets/images/portret-chretien.jpg" />
       </div>
     </section>
     <!-- Expertise -->
     <section id="expertise">
-      <div>
+      <div class="expertise-content">
         <h2>Expertise</h2>
         <h3>Knowledge, learning, applying, creating, awesomeness</h3>
         <p>
-          A bridge between man and machine, that's me! As a FrontEnd developer
-          with a focus on Angular, TypeScript, process optimization, AWS and
-          communication, I ensure the perfect user experience. Delivering high
-          quality code in for example TypeScript and Angular gives me energy. I
-          am a real team player who can easily communicate with other areas of
-          expertise. From meetup organizer to software engineer, I am the bridge
-          between man and machine.
+          My sweet spot is helping people with technology. What technology I use
+          is less important to me. Solving the issue there is in an optimal way
+          with the best software quality is awesome. Currently I can work with:
+          Angular, JavaScript, TypeScript, AWS, Python, HTML, CSS, GIT,
+          Bootstrap, Azure DevOps. My AWS knowledge helps with the DevOps
+          mentality and seeing the broader picture of IT. Software and
+          infrastructre are always integrated with eachother.
         </p>
       </div>
-      <div>
+      <div class="expertise-logos">
         <!--Expertise logo's -->
-        <img class="expertise-logos" src="assets/logos/angular.png">
+        <div class="expertise-logo-container">
+          <img src="assets/logos/html.png" />
+        </div>
+        <div class="expertise-logo-container">
+          <img src="assets/logos/javascript.png" />
+        </div>
+        <div class="expertise-logo-container">
+          <img src="assets/logos/css.png" />
+        </div>
+        <div class="expertise-logo-container">
+          <img src="assets/logos/typescript.png" />
+        </div>
+        <div class="expertise-logo-container">
+          <img src="assets/logos/python.png" />
+        </div>
+        <div class="expertise-logo-container">
+          <img src="assets/logos/angular.png" />
+        </div>
+        <div class="expertise-logo-container">
+          <img src="assets/logos/bootstrap.png" />
+        </div>
+        <div class="expertise-logo-container">
+          <img src="assets/logos/azure_devops.png" />
+        </div>
+        <div class="expertise-logo-container">
+          <img src="assets/logos/aws_arch.png" />
+        </div>
+        <div class="expertise-logo-container">
+          <img src="assets/logos/aws_dev.png" />
+        </div>
+        <div class="expertise-logo-container">
+          <img src="assets/logos/aws_cloud_prac.png" />
+        </div>
+        <div class="expertise-logo-container">
+          <img id="horizontal-aws-logo" src="assets/logos/aws.png" />
+        </div>
       </div>
     </section>
     <!--Projects-->
     <section>
-      <div>
+      <div class="projects-section-context">
         <h2>Projects</h2>
-        <h3>Knowledge, learning, applying, creating, awesomeness</h3>
+        <h3>From small till big projects, passion is the key</h3>
         <p>
-          A bridge between man and machine, that's me! As a FrontEnd developer
-          with a focus on Angular, TypeScript, process optimization, AWS and
-          communication, I ensure the perfect user experience. Delivering high
-          quality code in for example TypeScript and Angular gives me energy. I
-          am a real team player who can easily communicate with other areas of
-          expertise. From meetup organizer to software engineer, I am the bridge
-          between man and machine.
+          Work related and hobby projects from small till big are showcased
+          here. Some are private because of privacy reasons. The proces is what
+          matter to me, that is why I shared my github as well. Feel free to
+          contact me so that I can explain more about the projects I made! I
+          would love to hear feedback and improvements.
         </p>
-        <button>More projects</button>
-        <a  target="_blank" href="https://github.com/Chretienvv"
-          ><img  src="assets/logos/github.png"
-        /></a>
+        <div>
+          <button>More projects</button>
+          <a target="_blank" href="https://github.com/Chretienvv"
+            ><img class="project-github-icon" src="assets/logos/github.png"
+          /></a>
+        </div>
       </div>
       <!-- cards of projects -->
-      <div>
-        <div>
+      <div class="project-section-selection">
+        <div class="project-card">
           <h4>SoPickMeUp</h4>
           <h5>Role: Frontend developer</h5>
           <p>
@@ -112,44 +154,112 @@
           </p>
           <h5>Techniques</h5>
           <p>JavaScript, Angular, HTML, TypScript, CSS</p>
-          <button>More about the project</button>
+          <button class="project-card-button">More information</button>
+        </div>
+        <div class="project-card">
+          <h4>Aegon Projects</h4>
+          <h5>Role: Cloud Engineer</h5>
+          <p>
+            Responsible for developing a cost dashboard, cloud audits,
+            development of Hawkeye (Aegon specific AWS security tool), assisting
+            Aegon teams with migration plans and cost analysis in AWS. I
+            combined applied my frontend knowledge to combine infrastructre and
+            websites during the aegon innovation sprints.
+          </p>
+          <h5>Techniques</h5>
+          <p>Python, TypeScript, AWS, Rest, HTML, CSS, Azure DevOps</p>
+          <button class="project-card-button">More information</button>
+        </div>
+        <div class="project-card">
+          <h4>Portfolio</h4>
+          <h5>Role: Frontend developer</h5>
+          <p>
+            This portfolio is a WIP. I like to add new features, create a bit
+            more "flare". The code can be found on my github as for the other
+            projects. Some are private repositories, but we can always talk
+            about that ;)
+          </p>
+          <h5>Techniques</h5>
+          <p>JavaScript, HTML, CSS</p>
+          <button class="project-card-button">More information</button>
         </div>
       </div>
     </section>
     <!--Contact me -->
-    <section id="contact_me">
-      <h2>Lets get in contact</h2>
-      <h3>Lets get to know each other</h3>
-      <p>
-        Getting to know new people gives me energy. Lets see what we could do
-        for eachother! I am interested in meetup speakers, new opportunities,
-        knowledge sharing etc.
-      </p>
-      <form>
-        <label>Name</label>
-        <input />
-        <label>Email</label>
-        <input />
-        <label>Subject</label>
-        <input />
-        <label>Description</label>
-        <input />
-        <button>Send message</button>
-      </form>
-    </section>
-    <!--Downloads -->
-    <section>
-      <h2>Shy?</h2>
-      <h3>Want to know more about me without talking?</h3>
-      <p>
-        Getting to know new people gives me energy. Lets see what we could do
-        for eachother! I am interested in meetup speakers, new opportunities,
-        knowledge sharing etc.
-      </p>
-      <a href="">Linkedin</a>
-      <a href="">Github</a>
-      <button>CV donwload</button>
-      <button>Insights download</button>
+    <section id="contact-information">
+      <div>
+        <h2>Lets get in contact</h2>
+        <h3>Lets get to know each other</h3>
+        <p>
+          Getting to know new people gives me energy. Lets see what we could do
+          for eachother! I am interested in meetup speakers, new opportunities,
+          knowledge sharing etc.
+        </p>
+        <form class="contact-form" action="mailto:chretien1998@gmail.com" method="post">
+          <div>
+            <label for="name">Name</label>
+            <input type="text" name="name" placeholder="Chrétien van Veldhuizen"/>
+          </div>
+          <div>
+            <label for="email">Email</label>
+            <input type="email" name="email" placeholder="example@example.com"/>
+          </div>
+          <div>
+            <label for="email-title">Subject</label>
+            <select name="email-title">
+              <option value="job">Job opportunity</option>
+              <option value="meetup">Meetup speaker</option>
+              <option value="knowledge">Knowledge Sharing</option>
+              <option value="suprise">Surprise</option>
+            </select>
+          </div>
+          <div>
+            <label for="email-content">Description</label>
+            <textarea name="email-content"></textarea>
+          </div>
+
+          <button type="submit">Send message</button>
+        </form>
+      </div>
+
+      <!--Downloads -->
+      <div>
+        <h2>Shy?</h2>
+        <h3>Want to know more about me without talking?</h3>
+        <p>
+          Getting to know new people gives me energy. Lets see what we could do
+          for eachother! I am interested in knowledge sharing, new
+          opportunities, and speakers for
+          <a
+            class="no-margins"
+            target="_blank"
+            href="https://www.meetup.com/sogeti-frontend/"
+            >the frontend Lightning talks</a
+          >
+        </p>
+        <a
+          target="_blank"
+          href="https://www.linkedin.com/in/chretienvanveldhuizen/"
+          ><img class="project-github-icon" src="assets/logos/linkedin.png"
+        /></a>
+        <a target="_blank" href="https://github.com/Chretienvv"
+          ><img class="project-github-icon" src="assets/logos/github.png"
+        /></a>
+        <button class="button-downloads">
+          <a
+            href="assets/downloadable-files/summary_chretien.pdf"
+            target="_blank"
+            >Summary of my cv</a
+          >
+        </button>
+        <button class="button-downloads">
+          <a
+            href="assets/downloadable-files/chretien_van_veldhuizen_sogeti.pdf"
+            target="_blank"
+            >Extended CV</a
+          >
+        </button>
+      </div>
     </section>
   </body>
 </html>

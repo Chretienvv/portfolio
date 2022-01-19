@@ -11,8 +11,9 @@ My approach was as follows:
 5. Created a design and a styleguide in sketch.
 6. Thought about the small folder structure/archticture
 7. Started with setting up the html structure and content.
-8. First do it ugly and make it work, then optimize it
-8. To be continued.....
+8. First do it ugly and make it work, then optimize it. This way I show why some choices are important to make in the beginning.
+9. Adding animations and cool frontend tricks
+10. To be continued.....
 
 
 # Future additions/ ideas
