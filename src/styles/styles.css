@@ -102,6 +102,7 @@ menu,
 nav,
 section {
   display: block;
+
 }
 body {
   line-height: 1;
@@ -147,6 +148,7 @@ body {
 
 section {
   margin-left: 10%;
+  margin-top:5%;
 }
 
 /* Fonts */
@@ -180,12 +182,12 @@ h2 {
   color: var(--primary-color);
 }
 
-h3 {
+h3, h4{
   font-size: var(--font-size-sub-title);
 }
 
-h4,
-h5 {
+
+h4, h5 {
   color: var(--secondary-color);
 }
 
@@ -293,4 +295,36 @@ button {
 
 #horizontal-aws-logo{
   margin-top: 25%;
+}
+
+/* Projects section styling */
+.projects-section-context{
+  width:40%;
+
+}
+/* TODO: see how this link behaves and correct it without position */
+.project-github-icon{
+    cursor: pointer;
+    max-height: var(--font-size-icons);
+    position:relative;
+    top:10px
+
+}
+
+.project-section-selection{
+  max-width:80%;
+  display:flex;
+  column-gap: 5% ;
+  margin: var(--primary-margin);
+}
+
+.project-card{
+  border: 0.2rem solid var(--secondary-color);
+  max-width:30%;
+  text-align: center;
+
+}
+.project-card-button{
+  border-color: var(--secondary-color);
+
 }
