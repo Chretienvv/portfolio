@@ -136,7 +136,7 @@ table {
   --background-color: #1d1d1d;
   --font-size-titles: 3rem;
   --font-size-sub-title: 1.5rem;
-  --font-size-labels:1.2rem;
+  --font-size-labels: 1.2rem;
   --font-size-regular: 1rem;
   --font-size-icons: 2rem;
   --primary-margin: 1rem;
@@ -329,7 +329,8 @@ button {
 .project-card-button {
   border-color: var(--secondary-color);
 }
-.project-card-button:hover {
+.project-card-button:hover,
+.project-card-button:hover a {
   border-color: var(--primary-color);
   background-color: var(--primary-color);
   color: #1d1d1d;
@@ -353,7 +354,7 @@ button {
 .contact-form label {
   display: block;
   font-size: var(--font-size-labels);
-  margin:0.1rem;
+  margin: 0.1rem;
 }
 
 .contact-form input {
@@ -364,21 +365,19 @@ button {
   border-radius: 2px;
   width: 70%;
   display: block;
-  height:var(--font-size-icons);
+  height: var(--font-size-icons);
   margin-bottom: var(--primary-margin);
   outline: none;
-  color:var(--text-color)
+  color: var(--text-color);
 }
 
-
-.contact-form input:focus{
+.contact-form input:focus {
   border: 0.2rem solid var(--secondary-color);
- 
 }
 .contact-form textarea {
   width: 70%;
   display: block;
-  height:6rem;
+  height: 6rem;
   border: 0.1rem solid var(--text-color);
   border-radius: 2px;
   background-color: var(--background-color);
@@ -389,22 +388,55 @@ button {
   font-weight: normal;
 }
 
-.contact-form textarea:focus{
+.contact-form textarea:focus {
   border: 0.2rem solid var(--secondary-color);
-
 }
 
-.contact-form button{
-  margin-left:0;
+.contact-form button {
+  margin-left: 0;
 }
 
-select{
-  background-color:var(--background-color);
-  width:71%;
+select {
+  background-color: var(--background-color);
+  width: 71%;
   border: 0.1rem solid var(--text-color);
   border-radius: 2px;
   margin-bottom: var(--primary-margin);
-  color:var(--text-color);
-  height:2rem;
-  outline:none;
+  color: var(--text-color);
+  height: 2rem;
+  outline: none;
+}
+
+/* Styling project card small */
+
+.project-card-small {
+  border: 0.2rem solid var(--secondary-color);
+  margin: var(--primary-margin);
+  max-width: 40%;
+
+  display:inline-block
+}
+
+.project-card-small:hover{
+  border: 0.2rem solid var(--primary-color);
+  color:var(--primary-color);
+  cursor:pointer;
+}
+
+
+.project-details-section {
+  display: grid;
+  grid-template-columns: 10% 35% 10% 35% 10%;
+  grid-template-areas: "... details ... selection";
+  margin: var(--primary-margin) 0 0 0;
+}
+
+
+.project-selection {
+  grid-area: selection;
+  display:flex;
+  flex-wrap: wrap;
+}
+.project-details {
+  grid-area: details;
 }
