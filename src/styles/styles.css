@@ -1,138 +1,6 @@
-/* CSS reset */
-
-html,
-body,
-div,
-span,
-applet,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-center,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-embed,
-figure,
-figcaption,
-footer,
-header,
-hgroup,
-menu,
-nav,
-output,
-ruby,
-section,
-summary,
-time,
-mark,
-audio,
-video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
-}
-
-/* HTML5 display-role reset for older browsers */
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section {
-  display: block;
-  margin: 0;
-  padding: 0;
-  border: 0;
-}
-body {
-  line-height: 1;
-}
-ol,
-ul {
-  list-style: none;
-  
-}
-blockquote,
-q {
-  quotes: none;
-}
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
-  content: "";
-  content: none;
-}
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
 /* Custom CSS */
-
 :root {
+  font-size: 16px;
   /* Styleguide colors */
   --primary-color: #08fdb4;
   --secondary-color: #81d8f7;
@@ -149,17 +17,19 @@ table {
   --font-size-icons: 2rem;
 
   /* Font family */
-  --primary-font-family:"Roboto", sans-serif;
-  --secondary-font-family:"Lato", sans-serif;
+  --primary-font-family: "Roboto", sans-serif;
+  --secondary-font-family: "Lato", sans-serif;
 
   /* Standard sizes */
   --primary-margin: 1rem;
   --secondary-margin: 10%;
   --primary-border-size: 0.2rem;
-
 }
 
-body, input, button, textarea{
+body,
+input,
+button,
+textarea {
   background-color: var(--background-color);
 }
 
@@ -210,20 +80,31 @@ a {
 }
 
 /* Grid for the homepage */
-body{
-  display:grid;
-  grid-template-columns: 10% 80% 10%;
-  row-gap:5%;
-  grid-template-areas: 
-  "nav nav  nav"
-  "... about-me ..."
-  "... expertise   ..."
-  "... projects   ..."
-  "... contact-information ..."
-  ;
+body {
+  display: grid;
+  grid-template-columns: 5% 90% 5%;
+  row-gap: 1%;
+  grid-template-areas:
+    "nav nav nav"
+    "... about-me ..."
+    "... expertise   ..."
+    "... projects   ..."
+    "... contact-information ...";
 }
 
-
+@media (min-width: 1280px) {
+  body {
+    display: grid;
+    grid-template-columns: 10% 80% 10%;
+    row-gap: 3%;
+    grid-template-areas:
+      "nav nav  nav"
+      "... about-me ..."
+      "... expertise   ..."
+      "... projects   ..."
+      "... contact-information ...";
+  }
+}
 /* Standard designs */
 
 button {
@@ -234,11 +115,10 @@ button {
   cursor: pointer;
 }
 
-.primary-border{
+.primary-border {
   border: 0.2rem solid var(--primary-color);
   border-radius: 2px;
 }
-
 
 /* Styling of the navigation */
 .nav-container {
@@ -249,14 +129,14 @@ button {
   align-items: center;
 }
 
-.nav-images-list{
-  margin-top:0;
+.nav-images-list {
+  margin-top: 0;
 }
 
 .nav-images {
   max-width: var(--font-size-icons);
   position: relative;
-  top:10px;
+  top: 10px;
 }
 
 li {
@@ -271,43 +151,63 @@ a:hover {
 /* Styling about me section */
 
 #about-me {
-  display: flex;
-  grid-area: about-me; 
-  column-gap: 10%;
+  grid-area: about-me;
+  display: grid;
+  grid-template-columns: 45% 10% 45%;
+  grid-template-areas: "about-content ... about-image";
 }
+
 
 .about-content {
-  max-width:45%
+  grid-area:about-content;
 }
 
-#portret {
+.about-image{
+  grid-area:about-image;
+}
+
+.portret {
   border: 0.3rem solid var(--primary-color);
   border-radius: 10px 100px / 120px;
   max-width: 80%;
   max-height: 100%;
-  display:block;
-  margin:5% auto  auto  auto ;
+  display: block;
+  margin: 5% auto auto auto;
 }
+
+
+@media (min-width: 1280px) {
+  #about-me {
+    grid-area: about-me;
+    display: grid;
+    grid-template-columns: 45% 10% 45%;
+    grid-template-areas: "about-content ... about-image";
+  }
+  
+}
+
+
+
 
 
 /* Expertise section styling */
 
 #expertise {
-  grid-area:expertise;
-  display:grid;
+  grid-area: expertise;
+  display: grid;
   grid-template-columns: 45% 10% 45%;
-  grid-template-areas: "expertise-description ... expertise-logos"
+  grid-template-areas: "expertise-description ... expertise-logos";
 }
 
 .expertise-content {
-  grid-area:expertise-description
+  grid-area: expertise-description;
 }
 
 .expertise-logos {
   display: inline-grid;
   justify-content: center;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-area:expertise-logos
+  grid-area: expertise-logos;
 }
 
 .expertise-logo-container {
@@ -328,14 +228,13 @@ a:hover {
   margin-top: 25%;
 }
 
-
 /* Projects section styling */
-#projects{
+#projects {
   grid-area: projects;
 }
 
 .projects-section-context {
-  max-width:45%
+  max-width: 45%;
 }
 
 /* TODO: see how this link behaves and correct it without position */
@@ -373,7 +272,7 @@ a:hover {
 #contact-information {
   display: flex;
   column-gap: 5%;
-  grid-area:contact-information
+  grid-area: contact-information;
 }
 
 .button-downloads {
@@ -394,7 +293,7 @@ a:hover {
 .contact-form input {
   border: 0.1rem solid var(--text-color);
   border-radius: 2px;
-  width: 70%;
+  width: 80%;
   height: var(--font-size-icons);
   margin-bottom: var(--primary-margin);
   outline: none;
@@ -406,14 +305,14 @@ a:hover {
 }
 
 .contact-form textarea {
-  width: 70%;
+  width: 80%;
   height: 6rem;
   border: 0.1rem solid var(--text-color);
   border-radius: 2px;
   color: var(--text-color);
   resize: none;
   outline: none;
-  font-family:var(--primary-font-family)
+  font-family: var(--primary-font-family);
 }
 
 .contact-form textarea:focus {
@@ -426,7 +325,7 @@ a:hover {
 
 select {
   background-color: var(--background-color);
-  width: 71%;
+  width: 81%;
   border: 0.1rem solid var(--text-color);
   border-radius: 2px;
   margin-bottom: var(--primary-margin);
@@ -434,19 +333,23 @@ select {
   height: 2rem;
   outline: none;
 }
+.lightning-talks {
+  margin: 0;
+  color: var(--primary-color);
+}
 
 /* Styling project card small */
 .project-card-small {
   border: 0.2rem solid var(--secondary-color);
   margin: var(--primary-margin);
   max-width: 40%;
-  display:inline-block
+  display: inline-block;
 }
 
-.project-card-small:hover{
+.project-card-small:hover {
   border: 0.2rem solid var(--primary-color);
-  color:var(--primary-color);
-  cursor:pointer;
+  color: var(--primary-color);
+  cursor: pointer;
 }
 
 .project-details-section {
@@ -458,7 +361,7 @@ select {
 
 .project-selection {
   grid-area: selection;
-  display:flex;
+  display: flex;
   flex-wrap: wrap;
 }
 
