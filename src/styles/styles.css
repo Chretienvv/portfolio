@@ -80,6 +80,8 @@ a {
 }
 
 /* Grid for the homepage */
+
+
 body {
   display: grid;
   grid-template-columns: 5% 90% 5%;
@@ -92,19 +94,6 @@ body {
     "... contact-information ...";
 }
 
-@media (min-width: 1280px) {
-  body {
-    display: grid;
-    grid-template-columns: 10% 80% 10%;
-    row-gap: 3%;
-    grid-template-areas:
-      "nav nav  nav"
-      "... about-me ..."
-      "... expertise   ..."
-      "... projects   ..."
-      "... contact-information ...";
-  }
-}
 /* Standard designs */
 
 button {
@@ -277,11 +266,32 @@ a:hover {
 
 .button-downloads {
   display: inline-block;
+  max-width: 40%;
+}
+
+@media (max-width: 1024px) {
+  #contact-information {
+    flex-wrap: wrap;
+  }
+
+.download-section{
+  order:2
+}
+.button-downloads {
+  display: inline-block;
   max-width: 30%;
+}
+
+
+}
+#contact-information article{
+  display: inline-block
+
 }
 
 .contact-form {
   margin-left: var(--primary-margin);
+
 }
 
 .contact-form label {
