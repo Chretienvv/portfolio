@@ -114,7 +114,8 @@ button {
   grid-area: nav;
   background-color: #2a2929;
   display: flex;
-  justify-content: center;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
   align-items: center;
 }
 
@@ -137,15 +138,24 @@ a:hover {
   color: var(--primary-color);
 }
 
+@media (max-width:900px){
+  .nav-images-list{
+    display:none
+  }
+}
 /* Styling about me section */
 
 #about-me {
   grid-area: about-me;
   display: grid;
   grid-template-columns: 45% 10% 45%;
-  grid-template-areas: "about-content ... about-image";
+  grid-template-areas: 
+  "about-content ... about-image"
+  "character-traits ... about-image";
 }
-
+.character-traits{
+  grid-area:character-traits;
+}
 
 .about-content {
   grid-area:about-content;
@@ -164,19 +174,27 @@ a:hover {
   margin: 5% auto auto auto;
 }
 
-
-@media (min-width: 1280px) {
+@media (max-width: 1024px) {
   #about-me {
-    grid-area: about-me;
-    display: grid;
-    grid-template-columns: 45% 10% 45%;
-    grid-template-areas: "about-content ... about-image";
+    grid-template-areas: 
+    "about-content about-content about-content"
+    "character-traits  ... about-image";
   }
-  
 }
 
+@media (max-width: 476px) {
+  #about-me {
+    grid-template-areas: 
+    "about-content about-content about-content"
+    "about-image about-image about-image"
+    "character-traits character-traits character-traits"
+    ;
+  }
 
-
+  .character-traits button{
+    width:80%
+  }
+}
 
 
 /* Expertise section styling */
@@ -193,12 +211,28 @@ a:hover {
 }
 
 .expertise-logos {
-  display: inline-grid;
-  justify-content: center;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap:  wrap;
+  align-items:center;
+  column-gap: var(--primary-margin);
+  row-gap: var(--primary-margin);
   grid-area: expertise-logos;
+  margin:var(--primary-margin);
+  max-width:470px;
 }
 
+@media (max-width: 768px) {
+  #expertise {
+    grid-area: expertise;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-areas: 
+    "expertise-description"
+    "expertise-logos";
+  }
+
+}
 .expertise-logo-container {
   background-color: var(--text-color);
   height: 75px;
@@ -238,6 +272,7 @@ a:hover {
   display: flex;
   column-gap: 5%;
   margin: var(--primary-margin);
+
 }
 
 .project-card {
@@ -257,6 +292,23 @@ a:hover {
   color: #1d1d1d;
 }
 
+
+@media (max-width: 1024px) {
+  .projects-section-context {
+    max-width: 100%;
+  }
+  .project-card{
+    display:block;
+    max-width:100%;
+    text-align: left;
+  }
+  .project-section-selection {
+    flex-wrap: wrap;
+    row-gap:var(--primary-margin)
+  }
+}
+
+
 /* Contact information styling */
 #contact-information {
   display: flex;
@@ -272,6 +324,7 @@ a:hover {
 @media (max-width: 1024px) {
   #contact-information {
     flex-wrap: wrap;
+    row-gap: var(--primary-margin);
   }
 
 .download-section{
@@ -279,19 +332,16 @@ a:hover {
 }
 .button-downloads {
   display: inline-block;
-  max-width: 30%;
+  max-width: 35%;
 }
 
-
-}
-#contact-information article{
+#contact-information a {
   display: inline-block
-
+}
 }
 
 .contact-form {
   margin-left: var(--primary-margin);
-
 }
 
 .contact-form label {
