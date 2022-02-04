@@ -1,296 +1,110 @@
-/* Import TODO make a choice between import or links */
-/* CSS reset */
-
-html,
-body,
-div,
-span,
-applet,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-center,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-embed,
-figure,
-figcaption,
-footer,
-header,
-hgroup,
-menu,
-nav,
-output,
-ruby,
-section,
-summary,
-time,
-mark,
-audio,
-video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
-}
-/* HTML5 display-role reset for older browsers */
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section {
-  display: block;
-}
+/* Grid for the homepage */
 body {
-  line-height: 1;
-}
-ol,
-ul {
-  list-style: none;
-}
-blockquote,
-q {
-  quotes: none;
-}
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
-  content: "";
-  content: none;
-}
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-/* Variables from the styleguide */
-:root {
-  --primary-color: #08fdb4;
-  --secondary-color: #81d8f7;
-  --text-color: #fff;
-  --validation-color: #fd2155;
-  --projects-color: #ea9610;
-  --background-color: #1d1d1d;
-  --font-size-titles: 3rem;
-  --font-size-sub-title: 1.5rem;
-  --font-size-labels: 1.2rem;
-  --font-size-regular: 1rem;
-  --font-size-icons: 2rem;
-  --primary-margin: 1rem;
-}
-
-.no-margins {
-  margin: 0;
-}
-
-body {
-  background-color: var(--background-color);
-}
-
-section {
-  margin-left: 10%;
-  margin-top: 5%;
-}
-
-/* Fonts */
-h1,
-h2,
-h3,
-h4,
-h5,
-a {
-  font-family: "Lato", sans-serif;
-  font-weight: bold;
-  color: var(--text-color);
-  margin: var(--primary-margin);
-}
-
-p,
-label,
-button {
-  font-family: "Roboto", sans-serif;
-  font-weight: normal;
-  font-size: var(--font-size-regular);
-  color: var(--text-color);
-  margin: var(--primary-margin);
-  line-height: normal;
-}
-
-/* Detailed changes to fonts */
-h1,
-h2 {
-  font-size: var(--font-size-titles);
-  color: var(--primary-color);
-}
-
-h3,
-h4 {
-  font-size: var(--font-size-sub-title);
-}
-
-h4,
-h5 {
-  color: var(--secondary-color);
-}
-
-a {
-  text-decoration: none;
-  cursor: pointer;
-}
-
-/* Styling of the navigation */
-.nav-container {
-  background-color: #2a2929;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-width: fit-content;
-}
-
-.nav-images {
-  max-width: var(--font-size-icons);
-  margin: var(--primary-margin);
-  display: inline-block;
-}
-
-li {
-  display: inline-block;
-  margin: var(--primary-margin);
-}
-
-a:hover {
-  color: var(--primary-color);
+  display: grid;
+  grid-template-columns: 5% 90% 5%;
+  row-gap: 1%;
+  grid-template-areas:
+    "nav nav nav"
+    "... about-me ..."
+    "... expertise   ..."
+    "... projects   ..."
+    "... contact-information ...";
 }
 
 /* Styling about me section */
 
 #about-me {
-  display: flex;
-  margin-top: 3%;
+  grid-area: about-me;
+  display: grid;
+  grid-template-columns: 45% 10% 45%;
+  grid-template-areas:
+    "about-content ... about-image"
+    "character-traits ... about-image";
 }
+.character-traits {
+  grid-area: character-traits;
+}
+
 .about-content {
-  max-width: 40%;
+  grid-area: about-content;
 }
 
 .about-image {
-  margin-left: 10%;
+  grid-area: about-image;
 }
 
-#portret {
+.portret {
   border: 0.3rem solid var(--primary-color);
   border-radius: 10px 100px / 120px;
   max-width: 80%;
   max-height: 100%;
+  display: block;
+  margin: 5% auto auto auto;
 }
 
-/* Button design */
+@media (max-width: 1024px) {
+  #about-me {
+    grid-template-areas:
+      "about-content about-content about-content"
+      "character-traits  ... about-image";
+  }
+}
 
-button {
-  background-color: var(--background-color);
-  border: 0.2rem solid var(--primary-color);
-  border-radius: 2px;
-  width: 50%;
-  line-height: 2rem;
-  cursor: pointer;
+@media (max-width: 476px) {
+  #about-me {
+    grid-template-areas:
+      "about-content about-content about-content"
+      "about-image about-image about-image"
+      "character-traits character-traits character-traits";
+  }
+
+  .character-traits button {
+    width: 80%;
+  }
 }
 
 /* Expertise section styling */
 
 #expertise {
-  display: flex;
-  margin-top: 3%;
+  grid-area: expertise;
+  display: grid;
+  grid-template-columns: 45% 10% 45%;
+  grid-template-areas: "expertise-description ... expertise-logos";
 }
 
 .expertise-content {
-  max-width: 40%;
+  grid-area: expertise-description;
 }
 
 .expertise-logos {
-  margin-left: 10%;
-  display: inline-grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  align-items: center;
   column-gap: var(--primary-margin);
+  row-gap: var(--primary-margin);
+  grid-area: expertise-logos;
+  margin: var(--primary-margin);
+  max-width: 470px;
 }
 
-.expertise-logo {
-  max-width: 75px;
-  max-height: 75px;
-  background-color: var(--text-color);
-  border: 0.2rem solid var(--primary-color);
-  border-radius: 2px;
+@media (max-width: 768px) {
+  #expertise {
+    grid-area: expertise;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-areas:
+      "expertise-description"
+      "expertise-logos";
+  }
 }
-
 .expertise-logo-container {
   background-color: var(--text-color);
-  border: 0.2rem solid var(--primary-color);
-  border-radius: 2px;
   height: 75px;
   width: 75px;
   text-align: center;
 }
+
 .expertise-logo-container img {
   margin-top: 10%;
   margin-bottom: 10%;
@@ -303,9 +117,14 @@ button {
 }
 
 /* Projects section styling */
-.projects-section-context {
-  width: 40%;
+#projects {
+  grid-area: projects;
 }
+
+.projects-section-context {
+  max-width: 45%;
+}
+
 /* TODO: see how this link behaves and correct it without position */
 .project-github-icon {
   cursor: pointer;
@@ -315,7 +134,6 @@ button {
 }
 
 .project-section-selection {
-  max-width: 80%;
   display: flex;
   column-gap: 5%;
   margin: var(--primary-margin);
@@ -326,9 +144,11 @@ button {
   max-width: 30%;
   text-align: center;
 }
+
 .project-card-button {
   border-color: var(--secondary-color);
 }
+
 .project-card-button:hover,
 .project-card-button:hover a {
   border-color: var(--primary-color);
@@ -336,15 +156,50 @@ button {
   color: #1d1d1d;
 }
 
+@media (max-width: 1024px) {
+  .projects-section-context {
+    max-width: 100%;
+  }
+  .project-card {
+    display: block;
+    max-width: 100%;
+    text-align: left;
+  }
+  .project-section-selection {
+    flex-wrap: wrap;
+    row-gap: var(--primary-margin);
+  }
+}
+
 /* Contact information styling */
 #contact-information {
   display: flex;
-  gap: 5%;
+  column-gap: 5%;
+  grid-area: contact-information;
 }
 
 .button-downloads {
   display: inline-block;
-  max-width: 30%;
+  max-width: 40%;
+}
+
+@media (max-width: 1024px) {
+  #contact-information {
+    flex-wrap: wrap;
+    row-gap: var(--primary-margin);
+  }
+
+  .download-section {
+    order: 2;
+  }
+  .button-downloads {
+    display: inline-block;
+    max-width: 35%;
+  }
+
+  #contact-information a {
+    display: inline-block;
+  }
 }
 
 .contact-form {
@@ -358,13 +213,9 @@ button {
 }
 
 .contact-form input {
-  font-family: "Roboto", sans-serif;
-  font-weight: normal;
-  background-color: var(--background-color);
   border: 0.1rem solid var(--text-color);
   border-radius: 2px;
-  width: 70%;
-  display: block;
+  width: 80%;
   height: var(--font-size-icons);
   margin-bottom: var(--primary-margin);
   outline: none;
@@ -374,18 +225,16 @@ button {
 .contact-form input:focus {
   border: 0.2rem solid var(--secondary-color);
 }
+
 .contact-form textarea {
-  width: 70%;
-  display: block;
+  width: 80%;
   height: 6rem;
   border: 0.1rem solid var(--text-color);
   border-radius: 2px;
-  background-color: var(--background-color);
   color: var(--text-color);
   resize: none;
   outline: none;
-  font-family: "Roboto", sans-serif;
-  font-weight: normal;
+  font-family: var(--primary-font-family);
 }
 
 .contact-form textarea:focus {
@@ -398,7 +247,7 @@ button {
 
 select {
   background-color: var(--background-color);
-  width: 71%;
+  width: 81%;
   border: 0.1rem solid var(--text-color);
   border-radius: 2px;
   margin-bottom: var(--primary-margin);
@@ -407,36 +256,7 @@ select {
   outline: none;
 }
 
-/* Styling project card small */
-
-.project-card-small {
-  border: 0.2rem solid var(--secondary-color);
-  margin: var(--primary-margin);
-  max-width: 40%;
-
-  display:inline-block
-}
-
-.project-card-small:hover{
-  border: 0.2rem solid var(--primary-color);
-  color:var(--primary-color);
-  cursor:pointer;
-}
-
-
-.project-details-section {
-  display: grid;
-  grid-template-columns: 10% 35% 10% 35% 10%;
-  grid-template-areas: "... details ... selection";
-  margin: var(--primary-margin) 0 0 0;
-}
-
-
-.project-selection {
-  grid-area: selection;
-  display:flex;
-  flex-wrap: wrap;
-}
-.project-details {
-  grid-area: details;
+.lightning-talks {
+  margin: 0;
+  color: var(--primary-color);
 }

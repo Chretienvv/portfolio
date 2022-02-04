@@ -1,0 +1,130 @@
+/* Custom CSS */
+:root {
+  font-size: 16px;
+  /* Styleguide colors */
+  --primary-color: #08fdb4;
+  --secondary-color: #81d8f7;
+  --text-color: #fff;
+  --validation-color: #fd2155;
+  --projects-color: #ea9610;
+  --background-color: #1d1d1d;
+
+  /* Font sizes */
+  --font-size-titles: 3rem;
+  --font-size-sub-title: 1.5rem;
+  --font-size-labels: 1.2rem;
+  --font-size-regular: 1rem;
+  --font-size-icons: 2rem;
+
+  /* Font family */
+  --primary-font-family: "Roboto", sans-serif;
+  --secondary-font-family: "Lato", sans-serif;
+
+  /* Standard sizes */
+  --primary-margin: 1rem;
+  --secondary-margin: 10%;
+  --primary-border-size: 0.2rem;
+}
+
+body,
+input,
+button,
+textarea {
+  background-color: var(--background-color);
+}
+
+/* Fonts */
+h1,
+h2,
+h3,
+h4,
+h5,
+a {
+  font-family: var(--secondary-font-family);
+  font-weight: bold;
+  color: var(--text-color);
+  margin: var(--primary-margin);
+}
+
+p,
+label,
+button {
+  font-family: var(--primary-font-family);
+  font-weight: normal;
+  font-size: var(--font-size-regular);
+  color: var(--text-color);
+  margin: var(--primary-margin);
+  line-height: normal;
+}
+
+/* Detailed changes to fonts */
+h1,
+h2 {
+  font-size: var(--font-size-titles);
+  color: var(--primary-color);
+}
+
+h3,
+h4 {
+  font-size: var(--font-size-sub-title);
+}
+
+h4,
+h5 {
+  color: var(--secondary-color);
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Standard designs */
+
+button {
+  border: 0.2rem solid var(--primary-color);
+  border-radius: 2px;
+  width: 50%;
+  line-height: 2rem;
+  cursor: pointer;
+}
+
+.primary-border {
+  border: 0.2rem solid var(--primary-color);
+  border-radius: 2px;
+}
+
+/* Styling of the navigation */
+.nav-container {
+  grid-area: nav;
+  background-color: #2a2929;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.nav-images-list {
+  margin-top: 0;
+}
+
+.nav-images {
+  max-width: var(--font-size-icons);
+  position: relative;
+  top: 10px;
+}
+
+li {
+  display: inline-block;
+  margin: var(--primary-margin);
+}
+
+a:hover {
+  color: var(--primary-color);
+}
+
+@media (max-width: 900px) {
+  .nav-images-list {
+    display: none;
+  }
+}

@@ -3,40 +3,40 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Lato:wght@700&family=Roboto:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
+    href="https://fonts.googleapis.com/css2?family=Lato:wght@700&family=Roboto:wght@400;700&display=swap"
+    rel="stylesheet"
+  />
+    <link rel="stylesheet" href="./styles/normalize.css">
+    <link rel="stylesheet" href="./styles/general_styles.css" />
     <link rel="stylesheet" href="./styles/styles.css" />
+
     <title>Chrétien van Veldhuizen</title>
   </head>
   <body>
-    <div class="nav-container">
-      <nav>
-        <ul>
-          <li><a href="#about-me">About me</a></li>
-          <li><a href="#expertise">Expertise</a></li>
-          <li><a href="#">Projects</a></li>
-          <li><a href="#contact-me">Contact me</a></li>
-          <li><a href="#">Playground</a></li>
-        </ul>
-      </nav>
-      <div>
-        <a
-          target="_blank"
-          href="https://www.linkedin.com/in/chretienvanveldhuizen/"
-          ><img class="nav-images" src="assets/logos/linkedin.png"
-        /></a>
-        <a target="_blank" href="https://github.com/Chretienvv"
-          ><img class="nav-images" src="assets/logos/github.png"
-        /></a>
-      </div>
-    </div>
+    <nav class="nav-container">
+      <ul>
+        <li><a href="../src/index.html">About me</a></li>
+        <li><a href="#expertise">Expertise</a></li>
+        <li><a href="./components/project_page.html">Projects</a></li>
+        <li><a href="#contact-information">Contact me</a></li>
+        <li class="nav-images-list">
+          <a
+            target="_blank"
+            href="https://www.linkedin.com/in/chretienvanveldhuizen/"
+            ><img class="nav-images" src="assets/logos/linkedin.png"
+          /></a>
+        </li>
+        <li class="nav-images-list">
+          <a target="_blank" href="https://github.com/Chretienvv"
+            ><img class="nav-images" src="assets/logos/github.png"
+          /></a>
+        </li>
+      </ul>
+    </nav>
     <!-- About me Intro-->
     <section id="about-me">
-      <div class="about-content">
+      <article class="about-content">
         <h1>Bridge between man and Machine</h1>
         <h3>
           Chrétien van Veldhuizen: Frontend developer with an interest in cloud
@@ -50,26 +50,29 @@
           expertise. From meetup organizer to software engineer, I am the bridge
           between man and machine.
         </p>
+        
+      </article>
+      <div class="character-traits">
         <h3>Character</h3>
         <p>
           Proactive, Structured & Analytical, Transparent, Curious, Studious &
           Passionate, Helpful & Team player Social
         </p>
         <button>
-          <a
-            href="assets/downloadable-files/summary_chretien.pdf"
-            target="_blank"
-            >See my cv</a
-          >
+          See my cv
         </button>
       </div>
-      <div class="about-image">
-        <img id="portret" src="./assets/images/portret-chretien.jpg" />
-      </div>
+      <figure class="about-image">
+        <img
+          class="portret"
+          alt="portret of Chrétien"
+          src="./assets/images/portret-chretien.jpg"
+        />
+      </figure>
     </section>
     <!-- Expertise -->
     <section id="expertise">
-      <div class="expertise-content">
+      <article class="expertise-content">
         <h2>Expertise</h2>
         <h3>Knowledge, learning, applying, creating, awesomeness</h3>
         <p>
@@ -81,50 +84,60 @@
           mentality and seeing the broader picture of IT. Software and
           infrastructre are always integrated with eachother.
         </p>
-      </div>
-      <div class="expertise-logos">
+      </article>
+      <aside class="expertise-logos">
         <!--Expertise logo's -->
-        <div class="expertise-logo-container">
-          <img src="assets/logos/html.png" />
-        </div>
-        <div class="expertise-logo-container">
-          <img src="assets/logos/javascript.png" />
-        </div>
-        <div class="expertise-logo-container">
-          <img src="assets/logos/css.png" />
-        </div>
-        <div class="expertise-logo-container">
-          <img src="assets/logos/typescript.png" />
-        </div>
-        <div class="expertise-logo-container">
+        <figure class="expertise-logo-container primary-border">
+          <img alt="html" src="assets/logos/html.png" />
+        </figure>
+        <figure class="expertise-logo-container primary-border">
+          <img alt="javascript" src="assets/logos/javascript.png" />
+        </figure>
+        <figure class="expertise-logo-container primary-border">
+          <img alt="css" src="assets/logos/css.png" />
+        </figure>
+        <figure class="expertise-logo-container primary-border">
+          <img alt="typescript" src="assets/logos/typescript.png" />
+        </figure>
+        <figure class="expertise-logo-container primary-border">
           <img src="assets/logos/python.png" />
-        </div>
-        <div class="expertise-logo-container">
-          <img src="assets/logos/angular.png" />
-        </div>
-        <div class="expertise-logo-container">
-          <img src="assets/logos/bootstrap.png" />
-        </div>
-        <div class="expertise-logo-container">
-          <img src="assets/logos/azure_devops.png" />
-        </div>
-        <div class="expertise-logo-container">
-          <img src="assets/logos/aws_arch.png" />
-        </div>
-        <div class="expertise-logo-container">
-          <img src="assets/logos/aws_dev.png" />
-        </div>
-        <div class="expertise-logo-container">
-          <img src="assets/logos/aws_cloud_prac.png" />
-        </div>
-        <div class="expertise-logo-container">
-          <img id="horizontal-aws-logo" src="assets/logos/aws.png" />
-        </div>
-      </div>
+        </figure>
+        <figure class="expertise-logo-container primary-border">
+          <img alt="angular" src="assets/logos/angular.png" />
+        </figure>
+        <figure class="expertise-logo-container primary-border">
+          <img alt="bootstrap" src="assets/logos/bootstrap.png" />
+        </figure>
+        <figure class="expertise-logo-container primary-border">
+          <img alt="azure devops" src="assets/logos/azure_devops.png" />
+        </figure>
+        <figure class="expertise-logo-container primary-border">
+          <img
+            alt="aws solutions architect associate"
+            src="assets/logos/aws_arch.png"
+          />
+        </figure>
+        <figure class="expertise-logo-container primary-border">
+          <img alt="aws developer associate" src="assets/logos/aws_dev.png" />
+        </figure>
+        <figure class="expertise-logo-container primary-border">
+          <img
+            alt="aws cloud practitioner"
+            src="assets/logos/aws_cloud_prac.png"
+          />
+        </figure>
+        <figure class="expertise-logo-container primary-border">
+          <img
+            alt="amazon web services"
+            id="horizontal-aws-logo"
+            src="assets/logos/aws.png"
+          />
+        </figure>
+      </aside>
     </section>
     <!--Projects-->
-    <section>
-      <div class="projects-section-context">
+    <section id="projects">
+      <article class="projects-section-context">
         <h2>Projects</h2>
         <h3>From small till big projects, passion is the key</h3>
         <p>
@@ -140,10 +153,10 @@
             ><img class="project-github-icon" src="assets/logos/github.png"
           /></a>
         </div>
-      </div>
+      </article>
       <!-- cards of projects -->
-      <div class="project-section-selection">
-        <div class="project-card">
+      <section class="project-section-selection">
+        <article class="project-card">
           <h4>SoPickMeUp</h4>
           <h5>Role: Frontend developer</h5>
           <p>
@@ -155,8 +168,8 @@
           <h5>Techniques</h5>
           <p>JavaScript, Angular, HTML, TypScript, CSS</p>
           <button class="project-card-button">More information</button>
-        </div>
-        <div class="project-card">
+        </article>
+        <article class="project-card">
           <h4>Aegon Projects</h4>
           <h5>Role: Cloud Engineer</h5>
           <p>
@@ -169,8 +182,8 @@
           <h5>Techniques</h5>
           <p>Python, TypeScript, AWS, Rest, HTML, CSS, Azure DevOps</p>
           <button class="project-card-button">More information</button>
-        </div>
-        <div class="project-card">
+        </article>
+        <article class="project-card">
           <h4>Portfolio</h4>
           <h5>Role: Frontend developer</h5>
           <p>
@@ -182,12 +195,12 @@
           <h5>Techniques</h5>
           <p>JavaScript, HTML, CSS</p>
           <button class="project-card-button">More information</button>
-        </div>
-      </div>
+        </article>
+      </section>
     </section>
     <!--Contact me -->
     <section id="contact-information">
-      <div>
+      <article  class="download-section">
         <h2>Lets get in contact</h2>
         <h3>Lets get to know each other</h3>
         <p>
@@ -195,14 +208,26 @@
           for eachother! I am interested in meetup speakers, new opportunities,
           knowledge sharing etc.
         </p>
-        <form class="contact-form" action="mailto:chretien1998@gmail.com" method="post">
+        <form
+          class="contact-form"
+          action="mailto:chretien1998@gmail.com"
+          method="post"
+        >
           <div>
             <label for="name">Name</label>
-            <input type="text" name="name" placeholder="Chrétien van Veldhuizen"/>
+            <input
+              type="text"
+              name="name"
+              placeholder="Chrétien van Veldhuizen"
+            />
           </div>
           <div>
             <label for="email">Email</label>
-            <input type="email" name="email" placeholder="example@example.com"/>
+            <input
+              type="email"
+              name="email"
+              placeholder="example@example.com"
+            />
           </div>
           <div>
             <label for="email-title">Subject</label>
@@ -220,23 +245,28 @@
 
           <button type="submit">Send message</button>
         </form>
-      </div>
+      </article>
 
       <!--Downloads -->
-      <div>
-        <h2>Shy?</h2>
+      <article>
+        <h2>More about me?</h2>
         <h3>Want to know more about me without talking?</h3>
         <p>
           Getting to know new people gives me energy. Lets see what we could do
           for eachother! I am interested in knowledge sharing, new
-          opportunities, and speakers for
-          <a
-            class="no-margins"
+          opportunities, and speakers for <a
+            class="lightning-talks"
             target="_blank"
             href="https://www.meetup.com/sogeti-frontend/"
             >the frontend Lightning talks</a
           >
         </p>
+        <button class="button-downloads">
+          Summary of my cv
+        </button>
+        <button class="button-downloads">
+          Extended CV
+        </button>
         <a
           target="_blank"
           href="https://www.linkedin.com/in/chretienvanveldhuizen/"
@@ -245,21 +275,8 @@
         <a target="_blank" href="https://github.com/Chretienvv"
           ><img class="project-github-icon" src="assets/logos/github.png"
         /></a>
-        <button class="button-downloads">
-          <a
-            href="assets/downloadable-files/summary_chretien.pdf"
-            target="_blank"
-            >Summary of my cv</a
-          >
-        </button>
-        <button class="button-downloads">
-          <a
-            href="assets/downloadable-files/chretien_van_veldhuizen_sogeti.pdf"
-            target="_blank"
-            >Extended CV</a
-          >
-        </button>
-      </div>
+       
+      </article>
     </section>
   </body>
 </html>

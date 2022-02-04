@@ -9,34 +9,35 @@
       href="https://fonts.googleapis.com/css2?family=Lato:wght@700&family=Roboto:wght@400;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="../styles/styles.css" />
+    <link rel="stylesheet" href="../styles/normalize.css">
+    <link rel="stylesheet" href="../styles/general_styles.css" />
+    <link rel="stylesheet" href="../styles/project_details.css" />
     <title>Chrétien van Veldhuizen</title>
   </head>
   <body>
-    <div class="nav-container">
-      <nav>
-        <ul>
-          <li><a href="#about-me">About me</a></li>
-          <li><a href="#expertise">Expertise</a></li>
-          <li><a href="#">Projects</a></li>
-          <li><a href="#contact-me">Contact me</a></li>
-          <li><a href="#">Playground</a></li>
-        </ul>
-      </nav>
-      <div>
-        <a
-          target="_blank"
-          href="https://www.linkedin.com/in/chretienvanveldhuizen/"
-          ><img class="nav-images" src="../assets/logos/linkedin.png"
-        /></a>
-        <a target="_blank" href="https://github.com/Chretienvv"
-          ><img class="nav-images" src="../assets/logos/github.png"
-        /></a>
-      </div>
-    </div>
+    <nav class="nav-container">
+      <ul>
+        <li><a href="../index.html">About me</a></li>
+        <li><a href="../index.html#expertise">Expertise</a></li>
+        <li><a href="./components/project_page.html">Projects</a></li>
+        <li><a href="../index.html#contact-information">Contact me</a></li>
+        <li class="nav-images-list">
+          <a
+            target="_blank"
+            href="https://www.linkedin.com/in/chretienvanveldhuizen/"
+            ><img class="nav-images" src="../assets/logos/linkedin.png"
+          /></a>
+        </li>
+        <li class="nav-images-list">
+          <a target="_blank" href="https://github.com/Chretienvv"
+            ><img class="nav-images" src="../assets/logos/github.png"
+          /></a>
+        </li>
+      </ul>
+    </nav>
     <section class="project-details-section">
-      <div class="project-details">
-        <div>
+      <article class="project-details">
+        <article>
           <h2>Projects</h2>
           <h3>From small till big projects, passion is the key</h3>
           <p>
@@ -46,8 +47,8 @@
             to contact me so that I can explain more about the projects I made!
             I would love to hear feedback and improvements.
           </p>
-        </div>
-        <div>
+        </article>
+        <article>
           <h4>SoPickMeUp</h4>
           <h5>Role:</h5>
           <p>Frontend developer & Scrum master</p>
@@ -79,15 +80,14 @@
           <h5>Techniques</h5>
           <p>HTML, CSS, TypeScript, Angular, JSON, Git, Bootstrap</p>
           <button
-            onclick="window.open('https://github.com/Chretienvv','_blank')"
             class="project-card-button"
           >
             More information on my github
           </button>
-        </div>
-      </div>
+        </article>
+      </article>
 
-      <div class="project-selection">
+      <article class="project-selection">
         <div class="project-card-small">
           <h4>Project: SoPickMeUp</h4>
           <h5>Role:</h5>
@@ -144,7 +144,7 @@
           <h5>Techniques:</h5>
           <p>AWS, CSS, HTML, Ionic, JSON, TypeScript, Git</p>
         </div>
-      </div>
+      </article>
     </section>
   </body>
 </html>
