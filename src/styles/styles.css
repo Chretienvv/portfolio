@@ -1,4 +1,3 @@
-
 /* Grid for the homepage */
 body {
   display: grid;
@@ -18,20 +17,20 @@ body {
   grid-area: about-me;
   display: grid;
   grid-template-columns: 45% 10% 45%;
-  grid-template-areas: 
-  "about-content ... about-image"
-  "character-traits ... about-image";
+  grid-template-areas:
+    "about-content ... about-image"
+    "character-traits ... about-image";
 }
-.character-traits{
-  grid-area:character-traits;
+.character-traits {
+  grid-area: character-traits;
 }
 
 .about-content {
-  grid-area:about-content;
+  grid-area: about-content;
 }
 
-.about-image{
-  grid-area:about-image;
+.about-image {
+  grid-area: about-image;
 }
 
 .portret {
@@ -45,26 +44,24 @@ body {
 
 @media (max-width: 1024px) {
   #about-me {
-    grid-template-areas: 
-    "about-content about-content about-content"
-    "character-traits  ... about-image";
+    grid-template-areas:
+      "about-content about-content about-content"
+      "character-traits  ... about-image";
   }
 }
 
 @media (max-width: 476px) {
   #about-me {
-    grid-template-areas: 
-    "about-content about-content about-content"
-    "about-image about-image about-image"
-    "character-traits character-traits character-traits"
-    ;
+    grid-template-areas:
+      "about-content about-content about-content"
+      "about-image about-image about-image"
+      "character-traits character-traits character-traits";
   }
 
-  .character-traits button{
-    width:80%
+  .character-traits button {
+    width: 80%;
   }
 }
-
 
 /* Expertise section styling */
 
@@ -82,13 +79,13 @@ body {
 .expertise-logos {
   display: flex;
   justify-content: space-evenly;
-  flex-wrap:  wrap;
-  align-items:center;
+  flex-wrap: wrap;
+  align-items: center;
   column-gap: var(--primary-margin);
   row-gap: var(--primary-margin);
   grid-area: expertise-logos;
-  margin:var(--primary-margin);
-  max-width:470px;
+  margin: var(--primary-margin);
+  max-width: 470px;
 }
 
 @media (max-width: 768px) {
@@ -96,11 +93,10 @@ body {
     grid-area: expertise;
     display: grid;
     grid-template-columns: 100%;
-    grid-template-areas: 
-    "expertise-description"
-    "expertise-logos";
+    grid-template-areas:
+      "expertise-description"
+      "expertise-logos";
   }
-
 }
 .expertise-logo-container {
   background-color: var(--text-color);
@@ -141,7 +137,6 @@ body {
   display: flex;
   column-gap: 5%;
   margin: var(--primary-margin);
-
 }
 
 .project-card {
@@ -161,22 +156,20 @@ body {
   color: #1d1d1d;
 }
 
-
 @media (max-width: 1024px) {
   .projects-section-context {
     max-width: 100%;
   }
-  .project-card{
-    display:block;
-    max-width:100%;
+  .project-card {
+    display: block;
+    max-width: 100%;
     text-align: left;
   }
   .project-section-selection {
     flex-wrap: wrap;
-    row-gap:var(--primary-margin)
+    row-gap: var(--primary-margin);
   }
 }
-
 
 /* Contact information styling */
 #contact-information {
@@ -196,17 +189,17 @@ body {
     row-gap: var(--primary-margin);
   }
 
-.download-section{
-  order:2
-}
-.button-downloads {
-  display: inline-block;
-  max-width: 35%;
-}
+  .download-section {
+    order: 2;
+  }
+  .button-downloads {
+    display: inline-block;
+    max-width: 35%;
+  }
 
-#contact-information a {
-  display: inline-block
-}
+  #contact-information a {
+    display: inline-block;
+  }
 }
 
 .contact-form {
@@ -262,6 +255,7 @@ select {
   height: 2rem;
   outline: none;
 }
+
 .lightning-talks {
   margin: 0;
   color: var(--primary-color);
