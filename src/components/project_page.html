@@ -9,7 +9,7 @@
       href="https://fonts.googleapis.com/css2?family=Lato:wght@700&family=Roboto:wght@400;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="../styles/normalize.css">
+    <link rel="stylesheet" href="../styles/normalize.css" />
     <link rel="stylesheet" href="../styles/general_styles.css" />
     <link rel="stylesheet" href="../styles/project_details.css" />
     <title>Chrétien van Veldhuizen</title>
@@ -79,9 +79,7 @@
           </p>
           <h5>Techniques</h5>
           <p>HTML, CSS, TypeScript, Angular, JSON, Git, Bootstrap</p>
-          <button
-            class="project-card-button"
-          >
+          <button class="project-card-button github-button">
             More information on my github
           </button>
         </article>
@@ -147,4 +145,8 @@
       </article>
     </section>
   </body>
+  <script>
+    const githubButton = document.querySelector("button")
+    githubButton.addEventListener("click", () => window.open("https://github.com/Chretienvv"))
+  </script>
 </html>

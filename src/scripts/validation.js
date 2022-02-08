@@ -2,12 +2,22 @@ const nameElement = document.getElementById("name");
 const submit = document.querySelector('button[type="submit"]')
 const email = document.querySelector('input[name="email"]')
 const formElements = document.querySelectorAll(".form-elements")
+const downloadSummaryCVButtons = document.querySelectorAll('.cv-summary-button')
+const downloadExtendCVButtons = document.querySelectorAll(".cv-extended-button")
+
+downloadSummaryCVButtons.forEach(e => e.addEventListener("click",
+  () => window.open('./assets/downloadable-files/summary_chretien.pdf'),
+))
+
+downloadExtendCVButtons.forEach(e => e.addEventListener("click",
+() => window.open('./assets/downloadable-files/chretien_van_veldhuizen_sogeti.pdf'),
+))
 
 formElements.forEach(e => e.addEventListener("keyup", () => validateElement(e)))
 
 submit.addEventListener("click", (e) => {
   e.preventDefault()
-  if(validateForm()){
+  if (validateForm()) {
     sendEmail()
   }
 })
@@ -15,7 +25,7 @@ submit.addEventListener("click", (e) => {
 function validateElement(element) {
   const errorMessageTag = element.nextElementSibling;
   if (element.validity.valid) {
-    setSuccesFor(element,  errorMessageTag)
+    setSuccesFor(element, errorMessageTag)
     return true
   } else {
     setErrorFor(element, errorMessageTag)
@@ -50,6 +60,6 @@ function setSuccesFor(element, errorMessageTag) {
   errorMessageTag.style.visibility = "hidden";
 }
 
-function sendEmail(){
+function sendEmail() {
   console.log("fakeSend met ses")
 }
