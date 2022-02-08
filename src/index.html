@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="./styles/normalize.css">
     <link rel="stylesheet" href="./styles/general_styles.css" />
     <link rel="stylesheet" href="./styles/styles.css" />
+    <script defer src="scripts/validation.js"></script>
 
     <title>Chrétien van Veldhuizen</title>
   </head>
@@ -208,41 +209,52 @@
           for eachother! I am interested in meetup speakers, new opportunities,
           knowledge sharing etc.
         </p>
-        <form
+        <form 
+        id="form-test"
           class="contact-form"
-          action="mailto:chretien1998@gmail.com"
           method="post"
+          novalidate
         >
-          <div>
+          <div class="form-control">
             <label for="name">Name</label>
             <input
+              class="form-elements"
               type="text"
               name="name"
+              id="name"
+              required
+              maxlength="50"
               placeholder="Chrétien van Veldhuizen"
             />
+            <strong class="error-message">This field is required</strong>
           </div>
           <div>
             <label for="email">Email</label>
             <input
+            class="form-elements"
               type="email"
               name="email"
+              required
+              maxlength="50"
               placeholder="example@example.com"
             />
+            <strong class="error-message">This field is required and should be a valid email</strong>
           </div>
           <div>
             <label for="email-title">Subject</label>
-            <select name="email-title">
+            <select required name="email-title" class="form-elements">
               <option value="job">Job opportunity</option>
               <option value="meetup">Meetup speaker</option>
               <option value="knowledge">Knowledge Sharing</option>
               <option value="suprise">Surprise</option>
             </select>
+            <strong class="error-message">This field is required</strong>
           </div>
           <div>
             <label for="email-content">Description</label>
-            <textarea name="email-content"></textarea>
+            <textarea required maxlength="1000" name="email-content" class="form-elements"></textarea>
+            <strong class="error-message">This field is required and should give a description of what you want to know.</strong>
           </div>
-
           <button type="submit">Send message</button>
         </form>
       </article>
