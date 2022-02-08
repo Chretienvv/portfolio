@@ -4,12 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
-    href="https://fonts.googleapis.com/css2?family=Lato:wght@700&family=Roboto:wght@400;700&display=swap"
-    rel="stylesheet"
-  />
-    <link rel="stylesheet" href="./styles/normalize.css">
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@700&family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles/normalize.css" />
     <link rel="stylesheet" href="./styles/general_styles.css" />
     <link rel="stylesheet" href="./styles/styles.css" />
+    <script defer src="scripts/validation.js"></script>
 
     <title>Chrétien van Veldhuizen</title>
   </head>
@@ -50,7 +51,6 @@
           expertise. From meetup organizer to software engineer, I am the bridge
           between man and machine.
         </p>
-        
       </article>
       <div class="character-traits">
         <h3>Character</h3>
@@ -58,9 +58,7 @@
           Proactive, Structured & Analytical, Transparent, Curious, Studious &
           Passionate, Helpful & Team player Social
         </p>
-        <button>
-          See my cv
-        </button>
+        <button class="cv-summary-button">See my cv</button>
       </div>
       <figure class="about-image">
         <img
@@ -200,7 +198,7 @@
     </section>
     <!--Contact me -->
     <section id="contact-information">
-      <article  class="download-section">
+      <article class="download-section">
         <h2>Lets get in contact</h2>
         <h3>Lets get to know each other</h3>
         <p>
@@ -208,41 +206,57 @@
           for eachother! I am interested in meetup speakers, new opportunities,
           knowledge sharing etc.
         </p>
-        <form
-          class="contact-form"
-          action="mailto:chretien1998@gmail.com"
-          method="post"
-        >
-          <div>
+        <form id="form-test" class="contact-form" method="post" novalidate>
+          <div class="form-control">
             <label for="name">Name</label>
             <input
+              class="form-elements"
               type="text"
               name="name"
+              id="name"
+              required
+              maxlength="50"
               placeholder="Chrétien van Veldhuizen"
             />
+            <strong class="error-message">This field is required</strong>
           </div>
           <div>
             <label for="email">Email</label>
             <input
+              class="form-elements"
               type="email"
               name="email"
+              required
+              maxlength="50"
               placeholder="example@example.com"
             />
+            <strong class="error-message"
+              >This field is required and should be a valid email</strong
+            >
           </div>
           <div>
             <label for="email-title">Subject</label>
-            <select name="email-title">
+            <select required name="email-title" class="form-elements">
               <option value="job">Job opportunity</option>
               <option value="meetup">Meetup speaker</option>
               <option value="knowledge">Knowledge Sharing</option>
               <option value="suprise">Surprise</option>
             </select>
+            <strong class="error-message">This field is required</strong>
           </div>
           <div>
             <label for="email-content">Description</label>
-            <textarea name="email-content"></textarea>
+            <textarea
+              required
+              maxlength="1000"
+              name="email-content"
+              class="form-elements"
+            ></textarea>
+            <strong class="error-message"
+              >This field is required and should give a description of what you
+              want to know.</strong
+            >
           </div>
-
           <button type="submit">Send message</button>
         </form>
       </article>
@@ -254,19 +268,18 @@
         <p>
           Getting to know new people gives me energy. Lets see what we could do
           for eachother! I am interested in knowledge sharing, new
-          opportunities, and speakers for <a
+          opportunities, and speakers for
+          <a
             class="lightning-talks"
             target="_blank"
             href="https://www.meetup.com/sogeti-frontend/"
             >the frontend Lightning talks</a
           >
         </p>
-        <button class="button-downloads">
+        <button class="button-downloads cv-summary-button">
           Summary of my cv
         </button>
-        <button class="button-downloads">
-          Extended CV
-        </button>
+        <button class="button-downloads cv-extended-button">Sogeti CV</button>
         <a
           target="_blank"
           href="https://www.linkedin.com/in/chretienvanveldhuizen/"
@@ -275,7 +288,6 @@
         <a target="_blank" href="https://github.com/Chretienvv"
           ><img class="project-github-icon" src="assets/logos/github.png"
         /></a>
-       
       </article>
     </section>
   </body>

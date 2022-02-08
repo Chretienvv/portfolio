@@ -2,7 +2,7 @@
 body {
   display: grid;
   grid-template-columns: 5% 90% 5%;
-  row-gap: 1%;
+  row-gap: 3%;
   grid-template-areas:
     "nav nav nav"
     "... about-me ..."
@@ -39,7 +39,7 @@ body {
   max-width: 80%;
   max-height: 100%;
   display: block;
-  margin: 5% auto auto auto;
+  margin: auto;
 }
 
 @media (max-width: 1024px) {
@@ -84,8 +84,9 @@ body {
   column-gap: var(--primary-margin);
   row-gap: var(--primary-margin);
   grid-area: expertise-logos;
-  margin: var(--primary-margin);
+  margin:auto;
   max-width: 470px;
+
 }
 
 @media (max-width: 768px) {
@@ -212,7 +213,7 @@ body {
   margin: 0.1rem;
 }
 
-.contact-form input {
+.form-elements {
   border: 0.1rem solid var(--text-color);
   border-radius: 2px;
   width: 80%;
@@ -235,6 +236,7 @@ body {
   resize: none;
   outline: none;
   font-family: var(--primary-font-family);
+  margin-bottom: var(--primary-margin);
 }
 
 .contact-form textarea:focus {
@@ -259,4 +261,20 @@ select {
 .lightning-talks {
   margin: 0;
   color: var(--primary-color);
+}
+
+/* Form validation classes */
+.error {
+  border-color: var(--validation-color);
+}
+
+.success {
+  border-color: var(--primary-color);
+}
+
+.error-message {
+  visibility:hidden;
+  color:var(--validation-color);
+  display:inline-block;
+  margin: 0 0 0.4rem 0;
 }
