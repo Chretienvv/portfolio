@@ -230,7 +230,6 @@ body {
 .contact-form textarea {
   width: 80%;
   height: 6rem;
-  border: 0.1rem solid var(--text-color);
   border-radius: 2px;
   color: var(--text-color);
   resize: none;
