@@ -10,15 +10,19 @@ downloadSummaryCVButtons.forEach(e => e.addEventListener("click",
 ))
 
 downloadExtendCVButtons.forEach(e => e.addEventListener("click",
-() => window.open('./assets/downloadable-files/chretien_van_veldhuizen_sogeti.pdf'),
+  () => window.open('./assets/downloadable-files/chretien_van_veldhuizen_sogeti.pdf'),
 ))
 
-formElements.forEach(e => e.addEventListener("keyup", () => validateElement(e)))
+formElements.forEach(e => e.addEventListener("keyup", () => {
+  validateElement(e)
+}))
 
 submit.addEventListener("click", (e) => {
   e.preventDefault()
   if (validateForm()) {
-    sendEmail()
+    let emailValues = createEmailValues()
+    let emailContent = createEmailContent(emailValues)
+    sendEmail(emailContent)
   }
 })
 
@@ -60,6 +64,36 @@ function setSuccesFor(element, errorMessageTag) {
   errorMessageTag.style.visibility = "hidden";
 }
 
-function sendEmail() {
-  console.log("fakeSend met ses")
+function createEmailValues(){
+  let emailValues = {
+    name: "No name specified",
+    email: "No email specified",
+    subject: "No subject specified",
+    description: "No description specified"
+  }
+
+  for( let element of formElements){
+    emailValues[element.name] = element.value
+  }
+
+  return emailValues
+}
+
+function createEmailContent(emailValues){
+  let emailBody = `
+  Hey Chrétien,\n
+  Message from the form made by: ${emailValues.name} \n
+  The description:\n
+  ${emailValues.description}
+  `
+  let emailContent = {
+    subject: emailValues.subject,
+    body: emailBody,
+  }
+
+  return emailContent
+}
+
+function sendEmail(emailContent) {
+  window.open(`mailto:chretien1998@gmail.com?subject=${emailContent.subject}&body=${emailContent.body}`)
 }

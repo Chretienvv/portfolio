@@ -206,7 +206,7 @@
           for eachother! I am interested in meetup speakers, new opportunities,
           knowledge sharing etc.
         </p>
-        <form id="form-test" class="contact-form" method="post" novalidate>
+        <form id="form-test" class="contact-form" novalidate method="post">
           <div class="form-control">
             <label for="name">Name</label>
             <input
@@ -236,7 +236,7 @@
           </div>
           <div>
             <label for="email-title">Subject</label>
-            <select required name="email-title" class="form-elements">
+            <select required name="subject" class="form-elements">
               <option value="job">Job opportunity</option>
               <option value="meetup">Meetup speaker</option>
               <option value="knowledge">Knowledge Sharing</option>
@@ -245,11 +245,11 @@
             <strong class="error-message">This field is required</strong>
           </div>
           <div>
-            <label for="email-content">Description</label>
+            <label for="description">Description</label>
             <textarea
               required
               maxlength="1000"
-              name="email-content"
+              name="description"
               class="form-elements"
             ></textarea>
             <strong class="error-message"
