@@ -91,6 +91,11 @@ button {
   cursor: pointer;
 }
 
+button:hover {
+  background-color: var(--primary-color);
+  color: var(--background-color);
+}
+
 .primary-border {
   border: 0.2rem solid var(--primary-color);
   border-radius: 2px;
