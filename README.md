@@ -27,6 +27,7 @@ These are some options I possibly want to implement:
 - Different hosting options.
 - And much moreeeeeeee :) 
 - Webcomponents
+- Make a backend for the information on my portfolio
 
 
 ## Technique

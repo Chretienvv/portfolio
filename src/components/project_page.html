@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="../styles/normalize.css" />
     <link rel="stylesheet" href="../styles/general_styles.css" />
     <link rel="stylesheet" href="../styles/project_details.css" />
+    <script defer src="../scripts/project-content.js"></script>
     <title>Chrétien van Veldhuizen</title>
   </head>
   <body>
@@ -49,36 +50,17 @@
           </p>
         </article>
         <article>
-          <h4>SoPickMeUp</h4>
+          <h4 id="project-title">Error something went wrong</h4>
           <h5>Role:</h5>
-          <p>Frontend developer & Scrum master</p>
+          <p id="role">Error something went wrong</p>
           <h5>Responsibility:</h5>
-          <p>
-            I was responsible for the connection of the backend, built
-            components and services and implemented designs. All this in Angular
-            8 in combination with bootstrap and REST APIs. For example, I made
-            forms, the login function, and services in TypeScript. In this
-            project I had short lines with the designer and back-ender and we
-            switched gears quickly and efficiently. As a result, impactful
-            design choices are made or not.
-          </p>
+          <p id="responsibility">Error something went wrong</p>
           <h5>Project:</h5>
-          <p>
-            SoPickMeUp is a carpool web app that makes it possible for Sogetists
-            to ride together to events and training. This makes the journey more
-            fun, more efficient, and more environmentally conscious. In a team
-            of developers and designers I acted as frontend developer and scrum
-            master. This with CSR, security and AVG always in mind.
-          </p>
+          <p id="project-description">Error something went wrong</p>
           <h5>Next Time:</h5>
-          <p>
-            In the future I will implement testing earlier in the proces. During
-            this project there were times we wished it was there. Also the
-            accessibility of the application could be improved with for instance
-            A11y guidelines.
-          </p>
+          <p id="learnings">Error something went wrong</p>
           <h5>Techniques</h5>
-          <p>HTML, CSS, TypeScript, Angular, JSON, Git, Bootstrap</p>
+          <p id="techniques">Error something went wrong</p>
           <button class="project-card-button github-button">
             More information on my github
           </button>
@@ -86,7 +68,7 @@
       </article>
 
       <article class="project-selection">
-        <div class="project-card-small">
+        <div class="project-card-small" id="project-sopickmeup">
           <h4>Project: SoPickMeUp</h4>
           <h5>Role:</h5>
           <p>Frontend developer</p>
@@ -122,7 +104,7 @@
           <p>AWS Api gateway, HTML, CSS, JavaScript, AWS, Git</p>
         </div>
         <div class="project-card-small">
-          <h4>Project: Code projects</h4>
+          <h4>Project: Code Projects</h4>
           <h5>Role: Software engineer</h5>
           <p>Frontend developer</p>
           <h5>Techniques:</h5>
@@ -145,8 +127,4 @@
       </article>
     </section>
   </body>
-  <script>
-    const githubButton = document.querySelector("button")
-    githubButton.addEventListener("click", () => window.open("https://github.com/Chretienvv"))
-  </script>
 </html>
