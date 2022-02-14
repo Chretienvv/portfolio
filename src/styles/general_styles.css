@@ -1,8 +1,7 @@
 /* Custom CSS */
 :root {
-  font-size: 16px;
   /* Styleguide colors */
-  --validation-color: #fd2155;
+  --validation-color: #FD4E77;
   --primary-color: #08fdb4;
   --secondary-color: #81d8f7;
   --text-color: #fff;
