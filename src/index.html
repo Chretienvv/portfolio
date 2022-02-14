@@ -7,20 +7,22 @@
       href="https://fonts.googleapis.com/css2?family=Lato:wght@700&family=Roboto:wght@400;700&display=swap"
       rel="stylesheet"
     />
+   <link rel="icon" type="image/x-icon" href="./assets/logos/favicon.png">
+
     <link rel="stylesheet" href="./styles/normalize.css" />
     <link rel="stylesheet" href="./styles/general_styles.css" />
     <link rel="stylesheet" href="./styles/styles.css" />
+    <script defer src="scripts/home.js"></script>
     <script defer src="scripts/validation.js"></script>
-
     <title>Chrétien van Veldhuizen</title>
   </head>
   <body>
     <nav class="nav-container">
       <ul>
-        <li><a href="../src/index.html">About me</a></li>
-        <li><a href="#expertise">Expertise</a></li>
-        <li><a href="./components/project_page.html">Projects</a></li>
-        <li><a href="#contact-information">Contact me</a></li>
+        <li><a href="../src/index.html" class="nav-link">About me</a></li>
+        <li><a href="#expertise"  class="nav-link">Expertise</a></li>
+        <li><a href="./components/project_page.html"  class="nav-link">Projects</a></li>
+        <li><a href="#contact-information"  class="nav-link">Contact me</a></li>
         <li class="nav-images-list">
           <a
             target="_blank"
@@ -86,31 +88,31 @@
       <aside class="expertise-logos">
         <!--Expertise logo's -->
         <figure class="expertise-logo-container primary-border">
-          <img alt="html" src="assets/logos/html.png" />
+          <img loading="lazy" alt="html" src="assets/logos/html.png" />
         </figure>
         <figure class="expertise-logo-container primary-border">
-          <img alt="javascript" src="assets/logos/javascript.png" />
+          <img loading="lazy"alt="javascript" src="assets/logos/javascript.png" />
         </figure>
         <figure class="expertise-logo-container primary-border">
-          <img alt="css" src="assets/logos/css.png" />
+          <img loading="lazy" alt="css" src="assets/logos/css.png" />
         </figure>
         <figure class="expertise-logo-container primary-border">
-          <img alt="typescript" src="assets/logos/typescript.png" />
+          <img  loading="lazy" alt="typescript" src="assets/logos/typescript.png" />
         </figure>
         <figure class="expertise-logo-container primary-border">
-          <img src="assets/logos/python.png" />
+          <img loading="lazy" src="assets/logos/python.png" />
         </figure>
         <figure class="expertise-logo-container primary-border">
-          <img alt="angular" src="assets/logos/angular.png" />
+          <img loading="lazy" alt="angular" src="assets/logos/angular.png" />
         </figure>
         <figure class="expertise-logo-container primary-border">
-          <img alt="bootstrap" src="assets/logos/bootstrap.png" />
+          <img loading="lazy" alt="bootstrap" src="assets/logos/bootstrap.png" />
         </figure>
         <figure class="expertise-logo-container primary-border">
-          <img alt="azure devops" src="assets/logos/azure_devops.png" />
+          <img loading="lazy" alt="azure devops" src="assets/logos/azure_devops.png" />
         </figure>
         <figure class="expertise-logo-container primary-border">
-          <img
+          <img loading="lazy"
             alt="aws solutions architect associate"
             src="assets/logos/aws_arch.png"
           />
@@ -146,9 +148,9 @@
           would love to hear feedback and improvements.
         </p>
         <div>
-          <button>More projects</button>
+          <button class="project-button">More projects</button>
           <a target="_blank" href="https://github.com/Chretienvv"
-            ><img class="project-github-icon" src="assets/logos/github.png"
+            ><img loading="lazy" class="project-github-icon" src="assets/logos/github.png"
           /></a>
         </div>
       </article>
@@ -165,7 +167,7 @@
           </p>
           <h5>Techniques</h5>
           <p>JavaScript, Angular, HTML, TypScript, CSS</p>
-          <button class="project-card-button">More information</button>
+          <button class="project-card-button project-button">More information</button>
         </article>
         <article class="project-card">
           <h4>Aegon Projects</h4>
@@ -179,7 +181,7 @@
           </p>
           <h5>Techniques</h5>
           <p>Python, TypeScript, AWS, Rest, HTML, CSS, Azure DevOps</p>
-          <button class="project-card-button">More information</button>
+          <button class="project-card-button project-button">More information</button>
         </article>
         <article class="project-card">
           <h4>Portfolio</h4>
@@ -192,7 +194,7 @@
           </p>
           <h5>Techniques</h5>
           <p>JavaScript, HTML, CSS</p>
-          <button class="project-card-button">More information</button>
+          <button class="project-card-button project-button">More information</button>
         </article>
       </section>
     </section>
@@ -262,7 +264,7 @@
       </article>
 
       <!--Downloads -->
-      <article>
+      <article >
         <h2>More about me?</h2>
         <h3>Want to know more about me without talking?</h3>
         <p>
@@ -283,10 +285,10 @@
         <a
           target="_blank"
           href="https://www.linkedin.com/in/chretienvanveldhuizen/"
-          ><img class="project-github-icon" src="assets/logos/linkedin.png"
+          ><img loading="lazy" class="project-github-icon" src="assets/logos/linkedin.png"
         /></a>
         <a target="_blank" href="https://github.com/Chretienvv"
-          ><img class="project-github-icon" src="assets/logos/github.png"
+          ><img  loading="lazy" class="project-github-icon" src="assets/logos/github.png"
         /></a>
       </article>
     </section>

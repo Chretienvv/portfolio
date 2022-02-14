@@ -2,7 +2,7 @@
 body {
   display: grid;
   grid-template-columns: 5% 90% 5%;
-  row-gap: 3%;
+  row-gap: 1%;
   grid-template-areas:
     "nav nav nav"
     "... about-me ..."
@@ -40,6 +40,11 @@ body {
   max-height: 100%;
   display: block;
   margin: auto;
+}
+
+.portret:hover{
+  animation-name: fluid;
+  animation-duration: 2s;
 }
 
 @media (max-width: 1024px) {
@@ -106,6 +111,10 @@ body {
   text-align: center;
 }
 
+.expertise-logo-container:hover{
+  animation-name: wobble;
+  animation-duration: 4s;
+}
 .expertise-logo-container img {
   margin-top: 10%;
   margin-bottom: 10%;
@@ -126,12 +135,16 @@ body {
   max-width: 45%;
 }
 
-/* TODO: see how this link behaves and correct it without position */
 .project-github-icon {
   cursor: pointer;
   max-height: var(--font-size-icons);
   position: relative;
   top: 10px;
+}
+
+.project-github-icon:hover {
+  animation-name:wobble;
+  animation-duration: 2s;
 }
 
 .project-section-selection {
@@ -144,6 +157,7 @@ body {
   border: 0.2rem solid var(--secondary-color);
   max-width: 30%;
   text-align: center;
+  transition: transform 2s;
 }
 
 .project-card-button {
@@ -169,6 +183,12 @@ body {
   .project-section-selection {
     flex-wrap: wrap;
     row-gap: var(--primary-margin);
+  }
+}
+
+@media (max-width:475px){
+  .project-card-button {
+    width:80%
   }
 }
 
@@ -265,6 +285,8 @@ select {
 /* Form validation classes */
 .error {
   border-color: var(--validation-color);
+  animation-name: shake;
+  animation-duration: 0.5s;
 }
 
 .success {
