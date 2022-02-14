@@ -1,4 +1,5 @@
-const projectButtons = document.getElementsByClassName("project-card-button")
+
+const projectButtons = document.querySelectorAll(".project-button")
 
 for(let button of projectButtons){
     button.addEventListener("click", (e)=>{
