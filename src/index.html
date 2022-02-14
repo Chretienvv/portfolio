@@ -8,11 +8,10 @@
       rel="stylesheet"
     />
     <link rel="icon" type="image/x-icon" href="./assets/logos/favicon.png" />
-
     <link rel="stylesheet" href="./styles/normalize.css" />
     <link rel="stylesheet" href="./styles/general_styles.css" />
     <link rel="stylesheet" href="./styles/styles.css" />
-    <script defer src="scripts/home.js"></script>
+    <script defer src="scripts/index.js"></script>
     <script defer src="scripts/validation.js"></script>
     <title>Chrétien van Veldhuizen</title>
   </head>
@@ -62,14 +61,14 @@
           between man and machine.
         </p>
       </article>
-      <div class="character-traits">
+      <aside class="character-traits">
         <h3>Character</h3>
         <p>
           Proactive, Structured & Analytical, Transparent, Curious, Studious &
           Passionate, Helpful & Team player Social
         </p>
         <button class="cv-summary-button">See my cv</button>
-      </div>
+      </aside>
       <figure class="about-image">
         <img
           class="portret"
@@ -216,8 +215,8 @@
           </p>
           <h5>Techniques</h5>
           <p>
-            Python, TypeScript,  <abbr title="Amazon webservices">AWS</abbr>, Rest,
-            <abbr title="Hypertext Markup Language">HTML</abbr>,
+            Python, TypeScript, <abbr title="Amazon webservices">AWS</abbr>,
+            Rest, <abbr title="Hypertext Markup Language">HTML</abbr>,
             <abbr title="Cascading style sheet">CSS</abbr>Azure DevOps
           </p>
           <button class="project-card-button project-button">
@@ -266,7 +265,9 @@
               maxlength="50"
               placeholder="Chrétien van Veldhuizen"
             />
-            <strong role="error message" class="error-message">This field is required</strong>
+            <strong role="error message" class="error-message"
+              >This field is required</strong
+            >
           </div>
           <div>
             <label for="email">Email*</label>
@@ -290,7 +291,9 @@
               <option value="knowledge">Knowledge Sharing</option>
               <option value="suprise">Surprise</option>
             </select>
-            <strong  role="error message" class="error-message">This field is required</strong>
+            <strong role="error message" class="error-message"
+              >This field is required</strong
+            >
           </div>
           <div>
             <label for="description">Description*</label>
@@ -300,7 +303,7 @@
               name="description"
               class="form-elements"
             ></textarea>
-            <strong  role="error message" class="error-message"
+            <strong role="error message" class="error-message"
               >This field is required and should give a description of what you
               want to know.</strong
             >

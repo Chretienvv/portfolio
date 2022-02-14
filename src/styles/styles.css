@@ -168,7 +168,7 @@ body {
 .project-card-button:hover a {
   border-color: var(--primary-color);
   background-color: var(--primary-color);
-  color: #1d1d1d;
+  color: var(--background-color);
 }
 
 @media (max-width: 1024px) {
