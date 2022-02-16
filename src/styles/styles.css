@@ -34,8 +34,8 @@ body {
 }
 
 .portret {
-  border: 0.3rem solid var(--primary-color);
-  border-radius: 10px 100px / 120px;
+  border: 0.2rem solid var(--primary-color);
+  border-radius:10% 25%;
   max-width: 80%;
   max-height: 100%;
   display: block;
@@ -135,14 +135,14 @@ body {
   max-width: 45%;
 }
 
-.project-github-icon {
+.project-icon {
   cursor: pointer;
   max-height: var(--font-size-icons);
   position: relative;
   top: 10px;
 }
 
-.project-github-icon:hover {
+.project-icon:hover {
   animation-name:wobble;
   animation-duration: 2s;
 }
@@ -154,7 +154,7 @@ body {
 }
 
 .project-card {
-  border: 0.2rem solid var(--secondary-color);
+  border-color:var(--secondary-color);
   max-width: 30%;
   text-align: center;
   transition: transform 2s;
