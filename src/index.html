@@ -7,32 +7,38 @@
       href="https://fonts.googleapis.com/css2?family=Lato:wght@700&family=Roboto:wght@400;700&display=swap"
       rel="stylesheet"
     />
-   <link rel="icon" type="image/x-icon" href="./assets/logos/favicon.png">
-
+    <link rel="icon" type="image/x-icon" href="./assets/logos/favicon.png" />
     <link rel="stylesheet" href="./styles/normalize.css" />
     <link rel="stylesheet" href="./styles/general_styles.css" />
     <link rel="stylesheet" href="./styles/styles.css" />
-    <script defer src="scripts/home.js"></script>
-    <script defer src="scripts/validation.js"></script>
+    <script defer src="scripts/index.js"></script>
     <title>Chrétien van Veldhuizen</title>
   </head>
   <body>
     <nav class="nav-container">
       <ul>
         <li><a href="../src/index.html" class="nav-link">About me</a></li>
-        <li><a href="#expertise"  class="nav-link">Expertise</a></li>
-        <li><a href="./components/project_page.html"  class="nav-link">Projects</a></li>
-        <li><a href="#contact-information"  class="nav-link">Contact me</a></li>
+        <li><a href="#expertise" class="nav-link">Expertise</a></li>
+        <li>
+          <a href="./components/project_page.html" class="nav-link">Projects</a>
+        </li>
+        <li><a href="#contact-information" class="nav-link">Contact me</a></li>
         <li class="nav-images-list">
           <a
             target="_blank"
             href="https://www.linkedin.com/in/chretienvanveldhuizen/"
-            ><img class="nav-images" src="assets/logos/linkedin.png"
+            ><img
+              class="nav-images"
+              alt="Linkedin icon"
+              src="assets/logos/linkedin.png"
           /></a>
         </li>
         <li class="nav-images-list">
           <a target="_blank" href="https://github.com/Chretienvv"
-            ><img class="nav-images" src="assets/logos/github.png"
+            ><img
+              class="nav-images"
+              alt="github icon"
+              src="assets/logos/github.png"
           /></a>
         </li>
       </ul>
@@ -54,14 +60,14 @@
           between man and machine.
         </p>
       </article>
-      <div class="character-traits">
+      <aside class="character-traits">
         <h3>Character</h3>
         <p>
           Proactive, Structured & Analytical, Transparent, Curious, Studious &
           Passionate, Helpful & Team player Social
         </p>
         <button class="cv-summary-button">See my cv</button>
-      </div>
+      </aside>
       <figure class="about-image">
         <img
           class="portret"
@@ -91,13 +97,21 @@
           <img loading="lazy" alt="html" src="assets/logos/html.png" />
         </figure>
         <figure class="expertise-logo-container primary-border">
-          <img loading="lazy"alt="javascript" src="assets/logos/javascript.png" />
+          <img
+            loading="lazy"
+            alt="javascript"
+            src="assets/logos/javascript.png"
+          />
         </figure>
         <figure class="expertise-logo-container primary-border">
           <img loading="lazy" alt="css" src="assets/logos/css.png" />
         </figure>
         <figure class="expertise-logo-container primary-border">
-          <img  loading="lazy" alt="typescript" src="assets/logos/typescript.png" />
+          <img
+            loading="lazy"
+            alt="typescript"
+            src="assets/logos/typescript.png"
+          />
         </figure>
         <figure class="expertise-logo-container primary-border">
           <img loading="lazy" src="assets/logos/python.png" />
@@ -106,13 +120,22 @@
           <img loading="lazy" alt="angular" src="assets/logos/angular.png" />
         </figure>
         <figure class="expertise-logo-container primary-border">
-          <img loading="lazy" alt="bootstrap" src="assets/logos/bootstrap.png" />
+          <img
+            loading="lazy"
+            alt="bootstrap"
+            src="assets/logos/bootstrap.png"
+          />
         </figure>
         <figure class="expertise-logo-container primary-border">
-          <img loading="lazy" alt="azure devops" src="assets/logos/azure_devops.png" />
+          <img
+            loading="lazy"
+            alt="azure devops"
+            src="assets/logos/azure_devops.png"
+          />
         </figure>
         <figure class="expertise-logo-container primary-border">
-          <img loading="lazy"
+          <img
+            loading="lazy"
             alt="aws solutions architect associate"
             src="assets/logos/aws_arch.png"
           />
@@ -150,13 +173,17 @@
         <div>
           <button class="project-button">More projects</button>
           <a target="_blank" href="https://github.com/Chretienvv"
-            ><img loading="lazy" class="project-github-icon" src="assets/logos/github.png"
+            ><img
+              loading="lazy"
+              class="project-icon"
+              alt="github icon"
+              src="assets/logos/github.png"
           /></a>
         </div>
       </article>
       <!-- cards of projects -->
       <section class="project-section-selection">
-        <article class="project-card">
+        <article class="project-card primary-border">
           <h4>SoPickMeUp</h4>
           <h5>Role: Frontend developer</h5>
           <p>
@@ -166,10 +193,16 @@
             master for this team.
           </p>
           <h5>Techniques</h5>
-          <p>JavaScript, Angular, HTML, TypScript, CSS</p>
-          <button class="project-card-button project-button">More information</button>
+          <p>
+            JavaScript, Angular,
+            <abbr title="Hypertext Markup Language">HTML</abbr>,
+            <abbr title="Cascading style sheet">CSS</abbr>, TypeScript
+          </p>
+          <button class="project-card-button project-button">
+            More information
+          </button>
         </article>
-        <article class="project-card">
+        <article class="project-card primary-border">
           <h4>Aegon Projects</h4>
           <h5>Role: Cloud Engineer</h5>
           <p>
@@ -180,10 +213,16 @@
             websites during the aegon innovation sprints.
           </p>
           <h5>Techniques</h5>
-          <p>Python, TypeScript, AWS, Rest, HTML, CSS, Azure DevOps</p>
-          <button class="project-card-button project-button">More information</button>
+          <p>
+            Python, TypeScript, <abbr title="Amazon webservices">AWS</abbr>,
+            Rest, <abbr title="Hypertext Markup Language">HTML</abbr>,
+            <abbr title="Cascading style sheet">CSS</abbr>, Azure DevOps
+          </p>
+          <button class="project-card-button project-button">
+            More information
+          </button>
         </article>
-        <article class="project-card">
+        <article class="project-card primary-border">
           <h4>Portfolio</h4>
           <h5>Role: Frontend developer</h5>
           <p>
@@ -193,8 +232,13 @@
             about that ;)
           </p>
           <h5>Techniques</h5>
-          <p>JavaScript, HTML, CSS</p>
-          <button class="project-card-button project-button">More information</button>
+          <p>
+            JavaScript, <abbr title="Hypertext Markup Language">HTML</abbr>,
+            <abbr title="Cascading style sheet">CSS</abbr>
+          </p>
+          <button class="project-card-button project-button">
+            More information
+          </button>
         </article>
       </section>
     </section>
@@ -210,7 +254,7 @@
         </p>
         <form id="form-test" class="contact-form" novalidate method="post">
           <div class="form-control">
-            <label for="name">Name</label>
+            <label for="name">Name*</label>
             <input
               class="form-elements"
               type="text"
@@ -220,10 +264,12 @@
               maxlength="50"
               placeholder="Chrétien van Veldhuizen"
             />
-            <strong class="error-message">This field is required</strong>
+            <strong role="error message" class="error-message"
+              >This field is required</strong
+            >
           </div>
           <div>
-            <label for="email">Email</label>
+            <label for="email">Email*</label>
             <input
               class="form-elements"
               type="email"
@@ -232,29 +278,31 @@
               maxlength="50"
               placeholder="example@example.com"
             />
-            <strong class="error-message"
+            <strong role="error message" class="error-message"
               >This field is required and should be a valid email</strong
             >
           </div>
           <div>
-            <label for="email-title">Subject</label>
+            <label for="email-title">Subject*</label>
             <select required name="subject" class="form-elements">
               <option value="job">Job opportunity</option>
               <option value="meetup">Meetup speaker</option>
               <option value="knowledge">Knowledge Sharing</option>
               <option value="suprise">Surprise</option>
             </select>
-            <strong class="error-message">This field is required</strong>
+            <strong role="error message" class="error-message"
+              >This field is required</strong
+            >
           </div>
           <div>
-            <label for="description">Description</label>
+            <label for="description">Description*</label>
             <textarea
               required
               maxlength="1000"
               name="description"
               class="form-elements"
             ></textarea>
-            <strong class="error-message"
+            <strong role="error message" class="error-message"
               >This field is required and should give a description of what you
               want to know.</strong
             >
@@ -264,7 +312,7 @@
       </article>
 
       <!--Downloads -->
-      <article >
+      <article>
         <h2>More about me?</h2>
         <h3>Want to know more about me without talking?</h3>
         <p>
@@ -282,14 +330,24 @@
           Summary of my cv
         </button>
         <button class="button-downloads cv-extended-button">Sogeti CV</button>
-        <a
-          target="_blank"
-          href="https://www.linkedin.com/in/chretienvanveldhuizen/"
-          ><img loading="lazy" class="project-github-icon" src="assets/logos/linkedin.png"
-        /></a>
-        <a target="_blank" href="https://github.com/Chretienvv"
-          ><img  loading="lazy" class="project-github-icon" src="assets/logos/github.png"
-        /></a>
+        <div>
+          <a
+            target="_blank"
+            href="https://www.linkedin.com/in/chretienvanveldhuizen/"
+            ><img
+              loading="lazy"
+              class="project-icon"
+              alt="Linkedin icon"
+              src="assets/logos/linkedin.png"
+          /></a>
+          <a target="_blank" href="https://github.com/Chretienvv"
+            ><img
+              loading="lazy"
+              class="project-icon"
+              alt="github icon"
+              src="assets/logos/github.png"
+          /></a>
+        </div>
       </article>
     </section>
   </body>

@@ -75,8 +75,6 @@ let allProjectsFakeServer = {
     }
 }
 
-
-
 githubButton.addEventListener("click", () => window.open("https://github.com/Chretienvv"))
 
 for (element of projectCards) {
