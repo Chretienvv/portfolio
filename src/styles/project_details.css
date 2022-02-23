@@ -12,6 +12,7 @@ body {
   border: 0.2rem solid var(--secondary-color);
   margin: var(--primary-margin);
   max-width: 40%;
+  width:40%;
   word-wrap: break-word;
   display: inline-block;
 }
