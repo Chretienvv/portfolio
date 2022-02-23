@@ -114,6 +114,8 @@ button:hover {
   flex-wrap: wrap;
   justify-content: space-evenly;
   align-items: center;
+  position:fixed;
+  width:100%;
 }
 
 .nav-images-list {
@@ -135,12 +137,21 @@ a:hover {
   color: var(--primary-color);
 }
 
+section:first-of-type{
+  margin-top:5%;
+}
+
 @media (max-width: 900px) {
   .nav-images-list {
     display: none;
   }
 }
 
+@media(max-width:420px){
+  .contact-link{
+    display:none
+  }
+}
 /* Animations */
 @keyframes wobble {
   0% {

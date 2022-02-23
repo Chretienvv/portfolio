@@ -81,6 +81,11 @@ for (element of projectCards) {
     element.addEventListener("click", e => {
         let projectTitle = e.currentTarget.querySelector("h4").innerText.split(" ").slice(1).join("")
         setProjectDetails(allProjectsFakeServer[projectTitle])
+        window.scroll({
+            top:0,
+            left:0,
+            behavior: "smooth"
+        })
     })
 }
 
