@@ -47,6 +47,11 @@ body {
   animation-duration: 2s;
 }
 
+.cv-summary-button{
+  max-width: 80%;
+  width:100%
+}
+
 @media (max-width: 1024px) {
   #about-me {
     grid-template-areas:
@@ -140,6 +145,7 @@ body {
   max-height: var(--font-size-icons);
   position: relative;
   top: 10px;
+  z-index: -1;
 }
 
 .project-icon:hover {
@@ -213,13 +219,16 @@ body {
   .download-section {
     order: 2;
   }
-  .button-downloads {
-    display: inline-block;
-    max-width: 35%;
-  }
-
   #contact-information a {
     display: inline-block;
+  }
+}
+
+@media (max-width: 480px) {
+  .button-downloads {
+    display: inline-block;
+    max-width: 80%;
+    width:100%
   }
 }
 
