@@ -11,6 +11,11 @@ body {
     "... contact-information ...";
 }
 
+/* animation class */
+.change-color{
+    animation-name:colorChange;
+    animation-duration: 2s;
+}
 /* Styling about me section */
 
 #about-me {
@@ -163,7 +168,6 @@ body {
   border-color:var(--secondary-color);
   max-width: 30%;
   text-align: center;
-  transition: transform 2s;
 }
 
 .project-card-button {

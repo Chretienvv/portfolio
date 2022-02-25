@@ -223,3 +223,8 @@ section:first-of-type{
     transform: translate(1px, -2px) rotate(-1deg);
   }
 }
+
+@keyframes colorChange{
+	from { color: var(--secondary-color); }
+	to { color: var(--primary-color); }
+}

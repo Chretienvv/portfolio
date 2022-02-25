@@ -1,10 +1,22 @@
 const nameElement = document.getElementById("name");
 const submit = document.querySelector('button[type="submit"]')
-const email = document.querySelector('input[name="email"]')
 const formElements = document.querySelectorAll(".form-elements")
 const downloadSummaryCVButtons = document.querySelectorAll('.cv-summary-button')
 const downloadExtendCVButtons = document.querySelectorAll(".cv-extended-button")
 const projectButtons = document.querySelectorAll(".project-button")
+const headings = document.querySelectorAll("h2")
+
+
+
+let observer = new IntersectionObserver((elementEntry) =>{
+	if(elementEntry[0].isIntersecting === true){
+    elementEntry[0].target.classList.add("change-color")
+  }
+  else{
+    elementEntry[0].target.classList.remove("change-color")
+  }
+}, { threshold: [0] });
+
 
 downloadSummaryCVButtons.forEach(e => e.addEventListener("click",
   () => window.open('./assets/downloadable-files/summary_chretien.pdf'),
@@ -17,6 +29,11 @@ downloadExtendCVButtons.forEach(e => e.addEventListener("click",
 formElements.forEach(e => e.addEventListener("keyup", () => {
   validateElement(e)
 }))
+
+headings.forEach(
+  element => {
+    observer.observe(element)}
+)
 
 submit.addEventListener("click", (e) => {
   e.preventDefault()
@@ -74,7 +91,6 @@ function setSuccesFor(element, errorMessageTag) {
 function createEmailValues(){
   let emailValues = {
     name: "No name specified",
-    email: "No email specified",
     subject: "No subject specified",
     description: "No description specified"
   }
@@ -104,7 +120,4 @@ function createEmailContent(emailValues){
 function sendEmail(emailContent) {
   window.open(`mailto:chretien1998@gmail.com?subject=${emailContent.subject}&body=${emailContent.body}`)
 }
-
-
-
 
